@@ -1,0 +1,10 @@
+Gatekeeping Girlboss Gremlins: Lauren Lee, Kevin Li, Kevin Xiao
+APCS
+Final Project
+time spent:
+
+* List of men (3)
+* each man is a binary tree
+  * each conversation earns points based on selected answers
+  * certain point val at end of convo will lead down different node
+* Game.java, Men.java, player.java (player stats play into how many points earned per dialogue)
