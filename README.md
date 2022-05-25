@@ -1,5 +1,5 @@
-# FP_ggg
-Gatekeeping Girlboss Gremlins: Lauren Lee, Kevin Li, Kevin Xiao
+# FP_lauren's kevin harem
+lauren's kevin harem: Lauren Lee, Kevin Li, Kevin Xiao
 APCS
 Final Project
 time spent:
