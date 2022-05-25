@@ -1,5 +1,9 @@
 # FP_Gaslight Gatekeeping Girlbosses
-lauren's kevin harem: Lauren Lee, Kevin Li, Kevin Xiao
-APCS
-Final Project
-time spent:
+* Gaslight Gatekeeping Girlbosses
+* APCS pd8
+* Final Project
+* 2022-05-25
+* Time Spent:  _ hrs
+
+## Project Description
+## How-To-Launch Instructions
