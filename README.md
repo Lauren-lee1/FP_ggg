@@ -1,5 +1,5 @@
-# FP_Gaslight Gatekeeping Girlbosses
-* Gaslight Gatekeeping Girlbosses
+# FP_Gaslighting Gatekeeping Girlbosses
+* Gaslighting Gatekeeping Girlbosses
 * APCS pd8
 * Final Project
 * 2022-05-25
