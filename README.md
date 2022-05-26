@@ -13,5 +13,5 @@ Translation: This is a dating sim
 
 ## How-To-Launch Instructions
 
-$javac Game.java
+$javac Game.java  
 $java Game
