@@ -60,7 +60,13 @@ tales of wisdom gained...
     \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 
+2022-05-20
+--------------------------------------------------------------
+Laur :: Created repo, filed out goog form
+==============================================================
 2022-05-25
 --------------------------------------------------------------
-kxiao :: added description of idea to readme, destroyed Lauren's Kevin harem
+KXiao :: Wrote project description + use intructions in README, destroyed Lauren's Kevin harem
+Laur :: Created team flag + devlog
+KLi :: Started planning how the program will be implemented
 ==============================================================

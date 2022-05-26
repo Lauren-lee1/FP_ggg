@@ -7,11 +7,11 @@
 
 ## Project Description
 
-This is a game for incredibly attractive individuals such as yourself, and you will be able to explore a world full of similarly attractive individuals. Your mission should you choose to embark upon it, is to assemble the finest collection of 2D anime waifus and husbandos. Your beginning stats will be mediocre, like your real life life, but as all good things come with time, so will your immeasurable glow-up transcend space-time. Now, you are tasked to become the greatest alpha chad in the world and catch em all. We wish you the best of luck, brave warrior. 
+This is a game for incredibly attractive individuals such as yourself, and you will be able to explore a world full of similarly attractive individuals. Your mission should you choose to embark upon it, is to assemble the finest collection of 2D anime waifus and husbandos. Your beginning stats will be mediocre, like your real life life, but as all good things come with time, so will your immeasurable glow-up transcend space-time. Now, you are tasked to become the greatest alpha chad in the world and catch em all. We wish you the best of luck, brave warrior.
 
 Translation: This is a dating sim
 
 ## How-To-Launch Instructions
 
-$javac Game.java  
-$java Game
+$javac Woo.java  
+$java Woo
