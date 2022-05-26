@@ -60,10 +60,7 @@ tales of wisdom gained...
     \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 
-
-yyyy-mm-dd
+2022-05-25
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+kxiao :: added description of idea to readme, destroyed Lauren's Kevin harem
 ==============================================================
