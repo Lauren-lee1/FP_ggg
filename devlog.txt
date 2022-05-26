@@ -70,3 +70,9 @@ KXiao :: Wrote project description + use intructions in README, destroyed Lauren
 Laur :: Created team flag + devlog
 KLi :: Started planning how the program will be implemented
 ==============================================================
+2022-05-26
+--------------------------------------------------------------
+All :: Agreed on only having 3 dateable characters. Fleshed out how we'll use binary trees in the storyline
+KXiao :: Revised plans on character stats
+KLi :: Thought about possible implementations of stacks and queues
+Laur :: Created files according to current plan
