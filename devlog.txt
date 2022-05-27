@@ -70,3 +70,7 @@ KXiao :: Wrote project description + use intructions in README, destroyed Lauren
 Laur :: Created team flag + devlog
 KLi :: Started planning how the program will be implemented
 ==============================================================
+2022-05-26
+--------------------------------------------------------------
+All :: work on propro
+==============================================================
