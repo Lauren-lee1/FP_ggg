@@ -8,16 +8,6 @@ pd 08
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-USAGE:
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete this instruction block once all teammates understand usage.
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template,
- modify appropriately.
-
 zone of reflection--
 Flesh out each category whenever necessary, appropriate.
  Need not be fully filled in until end of project,
@@ -72,5 +62,14 @@ KLi :: Started planning how the program will be implemented
 ==============================================================
 2022-05-26
 --------------------------------------------------------------
-All :: work on propro
+All :: Agreed on only having 3 dateable characters. Fleshed out how we'll use binary trees in the storyline. Created a to-do list / idea list
+KXiao :: Revised plans on character stats. Started work on storyline.
+KLi :: Thought about possible implementations of stacks and queues. Wrote proposal based on to-do list. Ignored the typo in the readme.
+Laur :: Created files according to current plan. Started thinking about instance variables and inheritance.
+==============================================================
+2022-05-27
+--------------------------------------------------------------
+KXiao :: started writing script
+KLi :: started creating UML diagrams
+Laur :: started creating UML diagrams update value add gitignore
 ==============================================================
