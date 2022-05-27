@@ -74,5 +74,5 @@ KLi :: Started planning how the program will be implemented
 --------------------------------------------------------------
 All :: Agreed on only having 3 dateable characters. Fleshed out how we'll use binary trees in the storyline. Created a to-do list / idea list
 KXiao :: Revised plans on character stats. Started work on storyline.
-KLi :: Thought about possible implementations of stacks and queues. Wrote proposal based on to-do list.
+KLi :: Thought about possible implementations of stacks and queues. Wrote proposal based on to-do list. Ignored the typo in the readme.
 Laur :: Created files according to current plan. Started thinking about instance variables and inheritance.
