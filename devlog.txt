@@ -72,7 +72,7 @@ KLi :: Started planning how the program will be implemented
 ==============================================================
 2022-05-26
 --------------------------------------------------------------
-All :: Agreed on only having 3 dateable characters. Fleshed out how we'll use binary trees in the storyline
+All :: Agreed on only having 3 dateable characters. Fleshed out how we'll use binary trees in the storyline, created a to-do list / idea list
 KXiao :: Revised plans on character stats
-KLi :: Thought about possible implementations of stacks and queues
+KLi :: Thought about possible implementations of stacks and queues, wrote proposal based on to-do list
 Laur :: Created files according to current plan
