@@ -73,3 +73,7 @@ KXiao :: started writing script
 KLi :: started creating UML diagrams
 Laur :: started creating UML diagrams update value add gitignore
 ==============================================================
+2022-05-29
+--------------------------------------------------------------
+KLi :: tested an idea for reading files with scanner
+==============================================================
