@@ -41,7 +41,7 @@ public class Character{
   }
 
   public void sayLine() {
-      System.out.println(_dialogue.pop());
+      System.out.println(_name + ": " + _dialogue.pop());
   }
 
   public int getConfidence() {

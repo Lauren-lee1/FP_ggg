@@ -14,8 +14,4 @@ public class KXiao extends LoveInterest{
     public void receiveItem() {
         
     }
-
-    public void sayLine() {
-        System.out.println("KXiao: " + _dialogue.pop());
-    }
 }
