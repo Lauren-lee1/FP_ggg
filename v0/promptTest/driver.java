@@ -47,11 +47,14 @@ public class driver {
 
         Scanner reader = new Scanner(System.in);
         String response = reader.nextLine();
+        scanner.nextLine();
 
         if (response.equals("1")) {
-            System.out.println("poggers");
+            System.out.println(scanner.nextLine());
+            scanner.nextLine();
         } else {
-            System.out.println("not poggers");
+            scanner.nextLine();
+            System.out.println(scanner.nextLine());
         }
     }
 
