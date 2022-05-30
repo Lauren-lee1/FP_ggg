@@ -1,0 +1,11 @@
+this is line 1 from kevin 1
+
+prompt()
+will you go out with me?
+1: yes
+2: no
+
+this is line 5 from kevin 1
+this is line 6 from kevin 1
+this is line 7 from kevin 1
+this is line 8 from kevin 1

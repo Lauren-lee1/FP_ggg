@@ -14,7 +14,7 @@ public class Person{
 
   private BST _story;
 
-  public Men(String name){
+  public Person(String name){
     _name = name;
     _story = new BST();
   }

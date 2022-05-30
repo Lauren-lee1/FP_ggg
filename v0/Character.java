@@ -1,19 +1,36 @@
-public interface Character{
+package v1prototype;
+import java.util.Stack;
 
-  public void setStory();
+public class Character{
+  BST story;
+  TreeNode currentNode;
 
-  public int getLooks();
+  String name;
+  int confidence;
+  int intelligence;
+  int kindness;
 
-  public int getWealth();
+  Stack<String> dialogue;
 
-  public int getIQ();
+  public Character(String name) {
+      this.name = name;
+      dialogue = new Stack<String>();
+  }
 
-  public int getEQ();
+  public void addDialogue(String line) {
+      dialogue.push(line);
+  }
 
-  public int getEgo();
+  public int getConfidence() {
+      return confidence;
+  }
 
-  public void setStats();
+  public int getIntelligence() {
+      return intelligence;
+  }
 
-  public int calculalateDes();
+  public int getKindness() {
+      return kindness;
+  }
   
 }
