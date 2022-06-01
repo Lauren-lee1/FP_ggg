@@ -89,7 +89,6 @@ public class Game{
     while (true) {
         try {
             response = Integer.parseInt(_scanner.nextLine());
-            System.out.println(response > 0 && response <= effects.size());
 
             if (response > 0 && response <= effects.size()) {
                 decision(effects, response);
