@@ -81,7 +81,12 @@ KLi :: tested and pushed an idea for reading files with scanner
 --------------------------------------------------------------
 KLi :: Tested and pushed an idea for prompting the player. Implemented scanner and file reading into v1. Refactored TreeNode to fit with intended use. 
 Renamed Player.java to Character.java. Created subclass LoveInterest which extends Character.
-==============================================================2022-05-30
+==============================================================
+2022-05-31
 --------------------------------------------------------------
 Laur and Kli :: Implemented a way to prompt the player with a decision, and then move along the story tree based on that decision
+==============================================================
+2022-06-01
+--------------------------------------------------------------
+Kli :: Enhanced prompting so there can be more than 2 choices, and allowed for stat changes depending on choice
 ==============================================================
