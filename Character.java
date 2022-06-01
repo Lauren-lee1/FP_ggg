@@ -31,12 +31,13 @@ public class Character{
       readBackwards();
   }
 
+  //bug fix in v2: was previously printing "" when the file reader had no next line
   public void readBackwards() {
-    String line = "";
-    while (fileReader.hasNext()) {
-        line = fileReader.nextLine();
-        readBackwards();
+    if (!fileReader.hasNextLine()) {
+        return;
     }
+    String line = fileReader.nextLine();
+    readBackwards();
     addLine(line);
   }
 

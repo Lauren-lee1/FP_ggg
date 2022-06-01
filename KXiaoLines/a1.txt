@@ -1,2 +1,7 @@
 Hi my name is Kevin Xiao
 What's your name?
+That's a cool name
+prompt()
+Now will you go out with me?
+1: yes
+2: no

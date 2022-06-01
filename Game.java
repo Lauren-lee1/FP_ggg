@@ -25,7 +25,6 @@ public class Game{
     if (response.equals("1")) {
         _lover = new KXiao();
         _story = _lover.getStory();
-        setStory(_lover);
 
         System.out.println("You have selected KXiao" + "\n");
 
@@ -33,10 +32,6 @@ public class Game{
         System.out.println("that's not an option. Try again");
         chooseYourfighter();
     }
-  }
-
-  public void setStory(LoveInterest lover) {
-      _story = lover.getStory();
   }
 
   public void startDate(File date) {
@@ -54,7 +49,7 @@ public class Game{
     while (!dialogue.isEmpty()) {
         if (dialogue.peek().equals("prompt()")) {
             dialogue.pop();
-            System.out.println("\n");
+            System.out.println("");
             _lover.sayLine();
             _lover.sayLine();
             _lover.sayLine();
@@ -68,16 +63,12 @@ public class Game{
 
   //New in v2
   public void prompt() {
-
-    Scanner reader = new Scanner(System.in);
-    String response = reader.nextLine();
+    String response = _scanner.nextLine();
 
     if (response.equals("1")) {
         _lover.moveLeft();
-        play();
     } else if (response.equals("2")) {
         _lover.moveRight();
-        play();
     } else {
         System.out.println("That is not a valid option");
         prompt();
