@@ -23,7 +23,8 @@ wow we so BOSS bc...
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-When reaching the end of a dialogue stack, an extra empty line is printed
+When reaching the end of a dialogue stack, an extra empty line is printed 
+ - resolved: bad logic in addLines() led to an empty string being added at the bottom of the dialogue stack
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
