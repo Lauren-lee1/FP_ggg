@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Game{
   StoryNode _story;
@@ -14,8 +15,8 @@ public class Game{
       chooseYourfighter();
 
       startDate(_story.getValue());
-      _lover.sayLine();
-      _lover.sayLine();
+
+      play();
   }
 
   public void chooseYourfighter() {
@@ -46,5 +47,41 @@ public class Game{
 
   }
 
-  
+  //New in v2
+  public void play() {
+    Stack<String> dialogue = _lover.getDialogue();
+
+    while (!dialogue.isEmpty()) {
+        if (dialogue.peek().equals("prompt()")) {
+            dialogue.pop();
+            System.out.println("\n");
+            _lover.sayLine();
+            _lover.sayLine();
+            _lover.sayLine();
+            prompt();
+        } else {
+            _lover.sayLine();
+        }
+    }
+      
+  }
+
+  //New in v2
+  public void prompt() {
+
+    Scanner reader = new Scanner(System.in);
+    String response = reader.nextLine();
+
+    if (response.equals("1")) {
+        _lover.moveLeft();
+        play();
+    } else if (response.equals("2")) {
+        _lover.moveRight();
+        play();
+    } else {
+        System.out.println("That is not a valid option");
+        prompt();
+    }
+    
+  }   
 }

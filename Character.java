@@ -60,6 +60,11 @@ public class Character{
       return _name;
   }
 
+  //New addition in v2
+  public Stack<String> getDialogue() {
+      return _dialogue;
+  }
+ 
   public void setConfidence(int confidence) {
       _confidence = confidence;
   }
