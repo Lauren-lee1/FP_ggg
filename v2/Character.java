@@ -6,9 +6,9 @@ import java.util.Stack;
 public class Character{
 
   String _name;
-  int _confidence;
-  int _intelligence;
-  int _kindness;
+  int _confidence=0;
+  int _intelligence=0;
+  int _kindness=0;
 
   Stack<String> _dialogue;
   Scanner fileReader;
@@ -30,7 +30,7 @@ public class Character{
     }
       readBackwards();
   }
-  
+
   //bug fix in v2: was previously printing "" when the file reader had no next line
   public void readBackwards() {
     if (!fileReader.hasNextLine()) {
@@ -65,7 +65,7 @@ public class Character{
   public Stack<String> getDialogue() {
       return _dialogue;
   }
- 
+
   public void setConfidence(int confidence) {
       _confidence = confidence;
   }
@@ -78,5 +78,12 @@ public class Character{
       _kindness = kindness;
   }
 
-  
+  public void getStats(){
+    System.out.println("Stats");
+    System.out.println("Confidence: " + getConfidence());
+    System.out.println("Intelligence: " + getIntelligence());
+    System.out.println("Kindness: " + getKindness());
+  }
+
+
 }

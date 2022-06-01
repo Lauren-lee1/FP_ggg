@@ -1,14 +1,12 @@
 import java.util.ArrayList;
 
 public class Player extends Character{
-  String _gender;
   ArrayList<Item> inventory;
   double money;
   //public int _desirability
 
-  public Player(String name, String gender){
+  public Player(String name){
     super(name);
-    _gender = gender;
     inventory = new ArrayList<Item>();
     money = 0;
   }
@@ -20,7 +18,7 @@ public class Player extends Character{
   public void giveItem(LoveInterest lover) {
       lover.receiveItem();
   }
-  
+
   public void buyItem(Item item) {
       if (money > item.getPrice()) {
         inventory.add(item);
@@ -31,9 +29,6 @@ public class Player extends Character{
 
   }
 
-  public String getGender() {
-      return _gender;
-  }
 
   public String getInventory() {
       String output = "[";
