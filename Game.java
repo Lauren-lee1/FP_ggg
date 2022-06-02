@@ -9,11 +9,23 @@ public class Game{
   Scanner _scanner = new Scanner(System.in);
   Stack<String> _dialogue;
   Player _player = new Player("name");
-  
+
   public Game(){
       System.out.println("Welcome to Lauren's Kevin Harem");
+      System.out.println("What is your name?");
+      String name = _scanner.nextLine();
+      _play = new Player (name);
+      personalityTest();
+      System.out.println("These are your stats:");
+      _play.getStats();
+      System.out.println("These are your dates:")
+      //kevin1
+      //kevin2
+      //lauren
       System.out.println("Who would you like to date?");
       System.out.println("1: KXiao");
+      System.out.println("2: KLi");
+      System.out.println("3. LLee");
 
       chooseYourfighter();
 
@@ -57,7 +69,7 @@ public class Game{
             _lover.sayLine();
         }
     }
-      
+
   }
 
   //New in v3
@@ -66,8 +78,8 @@ public class Game{
     ArrayList<String> effects = new ArrayList<String>();
 
     //print the question
-    _lover.sayLine(); 
-    
+    _lover.sayLine();
+
     //print all options
     while (!_dialogue.empty()) {
         String nextLine = _dialogue.peek();
@@ -89,6 +101,7 @@ public class Game{
     while (true) {
         try {
             response = Integer.parseInt(_scanner.nextLine());
+            System.out.println(response > 0 && response <= effects.size());
 
             if (response > 0 && response <= effects.size()) {
                 decision(effects, response);
@@ -110,14 +123,14 @@ public class Game{
       String operation = appliedEffect.substring(0, 1);
       int amountIncreased = Integer.parseInt(appliedEffect.substring(0, indexOfSpace));
       String statChanged = appliedEffect.substring(indexOfSpace).toLowerCase();
-      
+
       if (operation.equals("-")) {
           amountIncreased = 0 - amountIncreased;
       }
 
       if (statChanged.equals("confidence")) {
           _player.setConfidence(_player.getConfidence() + amountIncreased);
-      } 
+      }
       if (statChanged.equals("intelligence")) {
         _player.setConfidence(_player.getIntelligence() + amountIncreased);
       }
