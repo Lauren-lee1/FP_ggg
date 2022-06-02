@@ -60,10 +60,16 @@ public class Game{
 
   //New in v2
   public void play() {
-
+    String dialogue = _dialogue.peek();
     while (!_dialogue.isEmpty()) {
-        if (_dialogue.peek().equals("prompt()")) {
-            _dialogue.pop();
+      if(dialogue.indexOf("|") != -1){
+        dialogue = dialogue.trim();
+        dialogue = dialogue.substring(1);
+        dialogue = dialogue.trim();
+
+      }
+        if (dialogue.equals("prompt()")) {
+            dialogue.pop();
             prompt();
         } else {
             _lover.sayLine();
@@ -105,13 +111,37 @@ public class Game{
 
             if (response > 0 && response <= effects.size()) {
                 decision(effects, response);
-                break;
+              //  break;
+            }
+            if (response == 1 && nextLine.indexOf("|") != -1){
+              while(nextLine.indexOf("<") != -1){
+                play();
+              }
+              _dialogue.pop();
+              while(nextLine.indexOf("<") != -1){
+                _dialogue.pop();
+              }
+              _dialogue.pop();
+            }
+            if (response == 2 && nextLine.indexof("|") != -1){
+              while(nextLine.indexOf("<") != -1){
+                _dialogue.pop();
+              }
+              _dialogue.pop();
+              while(nextLine.indexOf("<") != -1){
+                play();
+              }
+              _dialogue.pop();
             }
 
         } catch (Exception e) {
             System.out.println("That's not a valid response");
         }
     }
+  }
+
+  public void traverse(){
+    
   }
 
   //new in v3
