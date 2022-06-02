@@ -23,7 +23,7 @@ wow we so BOSS bc...
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-When reaching the end of a dialogue stack, an extra empty line is printed 
+When reaching the end of a dialogue stack, an extra empty line is printed
  - resolved: bad logic in addLines() led to an empty string being added at the bottom of the dialogue stack
 
 COOL STUFF LEARNED
@@ -79,7 +79,7 @@ KLi :: tested and pushed an idea for reading files with scanner
 ==============================================================
 2022-05-30
 --------------------------------------------------------------
-KLi :: Tested and pushed an idea for prompting the player. Implemented scanner and file reading into v1. Refactored TreeNode to fit with intended use. 
+KLi :: Tested and pushed an idea for prompting the player. Implemented scanner and file reading into v1. Refactored TreeNode to fit with intended use.
 Renamed Player.java to Character.java. Created subclass LoveInterest which extends Character.
 ==============================================================
 2022-05-31
@@ -88,5 +88,9 @@ Laur and Kli :: Implemented a way to prompt the player with a decision, and then
 ==============================================================
 2022-06-01
 --------------------------------------------------------------
+KXiao :: wrote the personality test
+LLee :: Coded in the personality test
 Kli :: Enhanced prompting so there can be more than 2 choices, and allowed for stat changes depending on choice
+All :: discussed and clarified algo
+LLee :: set KXiao's story, put cafe dialogue into file, augmented so each date is a node. Each dialogue set in the node can be converted into a stack to be popped out
 ==============================================================

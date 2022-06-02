@@ -10,7 +10,7 @@ public class Character{
   int _intelligence;
   int _kindness;
 
-  Stack<String> _dialogue;
+//  Stack<String> _dialogue;
   Scanner fileReader;
 
   public Character(String name) {
@@ -66,10 +66,10 @@ public class Character{
   }
 
   //New addition in v2
-  public Stack<String> getDialogue() {
-      return _dialogue;
-  }
- 
+  // public Stack<String> getDialogue() {
+  //     return _dialogue;
+  // }
+
   public void setConfidence(int confidence) {
       _confidence = confidence;
   }
@@ -82,5 +82,5 @@ public class Character{
       _kindness = kindness;
   }
 
-  
+
 }

@@ -4,7 +4,7 @@ public class StoryNode
 {
 
   File _cargo;
-  StoryNode _lt, _rt;
+  StoryNode _lt, _rt, _mid;
 
   StoryNode( String pathToFile )
   {
@@ -19,6 +19,11 @@ public class StoryNode
   StoryNode getRight()
   {
     return _rt;
+  }
+
+  StoryNode getMid()
+  {
+    return _mid;
   }
 
 
@@ -48,11 +53,16 @@ public class StoryNode
     _rt = theNewRight;
   }
 
+  void setMid(StoryNode theNewMid)
+  {
+    _mid = theNewMid;
+  }
+
 
   /**
    * Sets the value of this tree node.
    */
-  void setValue( String newFilePath ) 
+  void setValue( String newFilePath )
   {
     _cargo = new File(newFilePath);
   }

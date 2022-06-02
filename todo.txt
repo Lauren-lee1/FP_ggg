@@ -1,0 +1,6 @@
+- file for all scenarios for KXiao
+- traverse if no entry will go to constant
+  - a or b go to different node
+- | means sub of prompt
+- chracter bios
+- currency and shopping should come last
