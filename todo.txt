@@ -1,6 +1,13 @@
+- more than one stat statChanged
+- denote who is talking
+- clean repo
+- change stat for non prompt
 - file for all scenarios for KXiao
+- chracter bios
+- currency and shopping should come last
+- good ending vs capture?
+- multiple num options
+
 - traverse if no entry will go to constant
   - a or b go to different node
 - | means sub of prompt
-- chracter bios
-- currency and shopping should come last

@@ -94,3 +94,13 @@ Kli :: Enhanced prompting so there can be more than 2 choices, and allowed for s
 All :: discussed and clarified algo
 LLee :: set KXiao's story, put cafe dialogue into file, augmented so each date is a node. Each dialogue set in the node can be converted into a stack to be popped out
 ==============================================================
+2022-06-02
+--------------------------------------------------------------
+LLee ::
+* augmented prompt() to run through different scenarios depending on selected response in prompt
+* augmented play to recognize scenarios of prompt()
+* created play(node) that sets the node's dialogue to a stack that will be played.
+* play() runs through dialogue without setting new dialogue. Helper of play(node)
+* finished putting KXiao's Dialogue into files
+* created traverse() to move between nodes when prompted to
+==============================================================

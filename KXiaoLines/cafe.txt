@@ -1,0 +1,42 @@
+A Cafe? That sounds wonderful. I’m craving some biscuits.
+prompt()
+What beverage would you like to start off with?
+1 : Coffee / -10 intelligence
+2 : Tea / +10 intelligence
+  | prompt()
+  | Coffee? Coffee is a peasant commodity. I didn’t think it would be beneath you to order such.
+  | 1 : But coffee is delicious. Would you like to give it a try? / +15 confidence
+  | traverse()
+  | Maybe just a little. GAHH… this coffee is vile… How could you even fathom drinking this?
+  | a : You’re right, let’s try another beverage. / +20 kindness
+  | b : You’re not the right person for me  / +15 confidence
+<
+  | prompt()
+  | Tea, what are you, British? Absolutely not.
+  | 1 : Just give it a try, you’ll love it for sure.
+  | prompt()
+  | Okay, just a little though. Hey, this isn’t so bad after all. Perhaps I’ll start drinking more tea.
+  | 1 : Of course, since I like tea, you should also like tea. / +5 confidence
+  | 2 : See, what did I tell you, you just have to try new things. / +5 kindness
+<
+prompt()
+what food would you like to order?
+1 : ur mom
+2 : Anything you want /+5 kindness +10 intelligence
+3 : I’ll take this time… and this… and that.. / +10 confidence -5 kindness +5 intelligence
+<
+  | What foul mouth you have! I won’t stand for this
+  | traverse()
+<
+  | Lets see, I'll have this... and this...
+  | A couple hours later…
+  | traverse()
+  | I had a great time today. By any chance, would you like to take me out to another date?
+  | a : yes
+  | b : no
+<
+  | Oh wow, I guess there won’t be enough space for food for me…
+  | A couple hours later.
+  | I barely got to eat anything… Perhaps you aren’t the person for me.
+  | traverse()
+<
