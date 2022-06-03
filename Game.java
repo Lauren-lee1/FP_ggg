@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Stack;
 
+import org.w3c.dom.ls.LSException;
+
 public class Game{
   StoryNode _story;
   LoveInterest _lover;
@@ -28,7 +30,6 @@ public class Game{
       System.out.println("3. LLee");
 
       chooseYourfighter();
-
       //startDate(_story.getValue());
 
       _lover.play(_lover.getStory());

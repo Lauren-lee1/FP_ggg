@@ -103,4 +103,10 @@ LLee ::
 * play() runs through dialogue without setting new dialogue. Helper of play(node)
 * finished putting KXiao's Dialogue into files
 * created traverse() to move between nodes when prompted to
+KLi :: 
+* created v4alt due to missing code in v4 and because v4 doesn't compile
+* created a menu screen that allows for replaying
+* added more functionality to prompt() for loading dialogue
+* v4alt notably diverges from v4 in that there is no traverse() method, and play() only serves to print dialogue and otherwise does not change instance variables
+* created actionSelect() in which you can add new keywords and actions to be detected
 ==============================================================

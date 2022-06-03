@@ -1,0 +1,7 @@
+prompt()
+Coffee? Coffee is a peasant commodity. I didn’t think it would be beneath you to order such.
+1 : But coffee is delicious. Would you like to give it a try? / +15 confidence
+prompt()
+Maybe just a little. GAHH… this coffee is vile… How could you even fathom drinking this?
+1 : You’re right, let’s try another beverage. / +20 kindness; load(cafe_anotherbeverage.txt)
+2 : You’re not the right person for me  / +15 confidence; end()

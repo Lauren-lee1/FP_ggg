@@ -1,0 +1,7 @@
+prompt()
+Tea, what are you, British? Absolutely not.
+1 : Just give it a try, you’ll love it for sure.
+prompt()
+Okay, just a little though. Hey, this isn’t so bad after all. Perhaps I’ll start drinking more tea.
+1 : Of course, since I like tea, you should also like tea. / +5 confidence
+2 : See, what did I tell you, you just have to try new things. / +5 kindness

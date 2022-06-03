@@ -1,0 +1,7 @@
+
+Lets see, I'll have this... and this...
+A couple hours later…
+prompt()
+I had a great time today. By any chance, would you like to take me out to another date?
+1 : yes
+2 : no
