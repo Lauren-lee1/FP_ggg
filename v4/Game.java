@@ -18,7 +18,7 @@ public class Game{
       personalityTest();
       System.out.println("These are your stats:");
       _play.getStats();
-      System.out.println("These are your dates:")
+      System.out.println("These are your dates:");
       //kevin1
       //kevin2
       //lauren

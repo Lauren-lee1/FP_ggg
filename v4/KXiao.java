@@ -1,4 +1,9 @@
 import java.util.Stack;
+import java.util.File;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.io.FileNotFoundException;
+
 public class KXiao extends LoveInterest{
     String source = "KXiaoLines/";
     Stack<String> _dialogue;
@@ -17,29 +22,29 @@ public class KXiao extends LoveInterest{
         //root
         _story = new StoryNode(source + "intro.txt");
 
-        StoryNode cafe = new StoryNode("cafe.txt")
+        StoryNode cafe = new StoryNode("cafe.txt");
         _story.setLeft(cafe);
         cafe.setRight(_story); //bad
-        StoryNode cafeGood = new StoryNode("cafeGood.txt")
-        cafe.setLeft(cafeGood) //good
+        StoryNode cafeGood = new StoryNode("cafeGood.txt");
+        cafe.setLeft(cafeGood); //good
 
-        StoryNode amusement = new StoryNode("amusement.txt")
+        StoryNode amusement = new StoryNode("amusement.txt");
         _story.setMid(amusement);
         amusement.setRight(_story); //bad
-        StoryNode amusementGood = new StoryNode("amusementGood.txt")
-        amusement.setLeft(amusementGood) //good
+        StoryNode amusementGood = new StoryNode("amusementGood.txt");
+        amusement.setLeft(amusementGood); //good
 
-        StoryNode vb = new StoryNode("volleyball .txt")
+        StoryNode vb = new StoryNode("volleyball .txt");
         _story.setRight(vb);
         vb.setRight(_story); //bad
-        StoryNode vbGood = new StoryNode("vbGood.txt")
-        vb.setLeft(vbGood) //good
+        StoryNode vbGood = new StoryNode("vbGood.txt");
+        vb.setLeft(vbGood); //good
     }
 
 
-
+dialogue.
     public void play(StoryNode node) {
-      _dialogue = new Stack<String>;
+      _dialogue = new Stack<String>();
       _dialogue = addLines(node.getValue());
       String currDialogue = _dialogue.peek();
       while (!_dialogue.isEmpty()) {
@@ -52,12 +57,12 @@ public class KXiao extends LoveInterest{
           if (currDialogue.equals("prompt()")) {
             _dialogue.pop();
             prompt();
-          } else if (dialogue.equals("traverse()"){
+          } else if (currDialogue.equals("traverse()")){
             _dialogue.pop();
             traverse();
           }
             else {
-            _lover.sayLine();
+            System.out.println(_dialogue.pop());
           }
         }
       }
@@ -72,14 +77,14 @@ public class KXiao extends LoveInterest{
 
           }
             if (dialogue.equals("prompt()")) {
-              dialogue.pop();
+              _dialogue.pop();
               prompt();
-            } else if (dialogue.equals("traverse()"){
-              dialogue.pop();
+            } else if (dialogue.equals("traverse()")){
+              _dialogue.pop();
               traverse();
             }
               else {
-              _lover.sayLine();
+              System.out.println(_dialogue.pop());
             }
         }
 
@@ -90,7 +95,7 @@ public class KXiao extends LoveInterest{
       }
 
       public Stack<String> addLines(File lines) {
-        Stack<String> dialogue = new Stack<String>;
+        Stack<String> dialogue = new Stack<String>();
           try {
             fileReader = new Scanner(lines);
         } catch (FileNotFoundException e) {
@@ -119,11 +124,11 @@ public class KXiao extends LoveInterest{
       ArrayList<String> effects = new ArrayList<String>();
 
       //print the question
-      _lover.sayLine();
+      System.out.println(_dialogue.pop());
 
       //print all options
       while (!_dialogue.empty()) {
-          int counter = 0
+          int counter = 0;
           String nextLine = _dialogue.peek();
           if (nextLine.indexOf(":") != -1) {
               System.out.println(_dialogue.pop());

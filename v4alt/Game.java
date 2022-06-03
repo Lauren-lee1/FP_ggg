@@ -19,7 +19,7 @@ public class Game {
       _player = new Player(name);
       _playerPath = new ArrayList<StoryNode>();
 
-      //personalityTest();
+      personalityTest();
       System.out.println("These are your stats:");
       _player.printStats();
       System.out.println("These are your dates:");
@@ -38,38 +38,38 @@ public class Game {
     System.out.println("Are you a human?");
     System.out.println("1. yes \n2.no");
     String response = _scanner.nextLine();
-    while(!response.equals("1") || !response.equals("2")){
+    while(!response.equals("1") && !response.equals("2")){
       System.out.println("That is not a valid option");
       response = _scanner.nextLine();
     }
     if (response.equals("1")){
-      play.setIntelligence(play.getIntelligence()+10);
+      _player.setIntelligence(_player.getIntelligence()+10);
     } else if (response.equals("2")){
-      play.setConfidence(play.getConfidence()+10);
+      _player.setConfidence(_player.getConfidence()+10);
     }
     System.out.println("Do you like computer science?");
     System.out.println("1. yes \n2.no");
     response = _scanner.nextLine();
-    while(!response.equals("1") || !reponse.equals("2")){
+    while(!response.equals("1") && !response.equals("2")){
       System.out.println("That is not a valid option");
       response = _scanner.nextLine();
     }
     if (response.equals("1")){
-      play.setKindness(play.getKindness()+10);
+      _player.setKindness(_player.getKindness()+10);
     } else if (response.equals("2")){
-      play.setIntelligence(play.getIntelligence()+10);
+      _player.setIntelligence(_player.getIntelligence()+10);
     }
     System.out.println("Would you steal an opportunity from another person even if you thought that opportunity would be way more useful for the other person?");
     System.out.println("1. yes \n2.no");
     response = _scanner.nextLine();
-    while(!response.equals("1") || !reponse.equals("2")){
+    while(!response.equals("1") && !response.equals("2")){
       System.out.println("That is not a valid option");
       response = _scanner.nextLine();
     }
     if (response.equals("1")){
-      play.setConfidence(play.getConfidence()+10);
+      _player.setConfidence(_player.getConfidence()+10);
     } else if  (response.equals("2")){
-      play.setKindness(play.getKindness()+10);
+      _player.setKindness(_player.getKindness()+10);
     }
   }
 

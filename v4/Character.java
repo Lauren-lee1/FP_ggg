@@ -21,6 +21,7 @@ public class Character{
       _kindness = 0;
   }
 
+ /*
   public void addLine(String line) {
       _dialogue.push(line);
   }
@@ -48,6 +49,7 @@ public class Character{
       System.out.println(_name + ": " + _dialogue.peek());
       return _dialogue.pop();
   }
+  */
 
   public int getConfidence() {
       return _confidence;
