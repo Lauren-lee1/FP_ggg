@@ -34,6 +34,45 @@ public class Game {
       play();
   }
 
+  public void personalityTest(){
+    System.out.println("Are you a human?");
+    System.out.println("1. yes \n2.no");
+    String response = _scanner.nextLine();
+    while(!response.equals("1") || !response.equals("2")){
+      System.out.println("That is not a valid option");
+      response = _scanner.nextLine();
+    }
+    if (response.equals("1")){
+      play.setIntelligence(play.getIntelligence()+10);
+    } else if (response.equals("2")){
+      play.setConfidence(play.getConfidence()+10);
+    }
+    System.out.println("Do you like computer science?");
+    System.out.println("1. yes \n2.no");
+    response = _scanner.nextLine();
+    while(!response.equals("1") || !reponse.equals("2")){
+      System.out.println("That is not a valid option");
+      response = _scanner.nextLine();
+    }
+    if (response.equals("1")){
+      play.setKindness(play.getKindness()+10);
+    } else if (response.equals("2")){
+      play.setIntelligence(play.getIntelligence()+10);
+    }
+    System.out.println("Would you steal an opportunity from another person even if you thought that opportunity would be way more useful for the other person?");
+    System.out.println("1. yes \n2.no");
+    response = _scanner.nextLine();
+    while(!response.equals("1") || !reponse.equals("2")){
+      System.out.println("That is not a valid option");
+      response = _scanner.nextLine();
+    }
+    if (response.equals("1")){
+      play.setConfidence(play.getConfidence()+10);
+    } else if  (response.equals("2")){
+      play.setKindness(play.getKindness()+10);
+    }
+  }
+
   public void chooseYourfighter() {
     String response = _scanner.nextLine();
 
@@ -57,7 +96,7 @@ public class Game {
     while (!_dialogue.isEmpty()) {
         if (_dialogue.peek().equals("end()")) {
             _dialogue.clear();
-        } else 
+        } else
         if (_dialogue.peek().trim().equals("prompt()")) {
             _dialogue.pop();
             prompt();
@@ -107,13 +146,13 @@ public class Game {
             }
           }
           numberOfOptions = _story.getNumberOfChildren();
-      } 
+      }
 
       //options in the menu
       System.out.println("===================MENU====================");
       _playerPath.add(_story);
       System.out.println("you have completed the date: " + _story + "\n");
-      System.out.println("What kind of date would you like to go on?"); 
+      System.out.println("What kind of date would you like to go on?");
       System.out.println("0: I'd like to see my stats");
 
       //prints the names of the different date options. will only print as many options as the current node has children
@@ -189,7 +228,7 @@ public class Game {
     //run the action corresponding to the option
     actionSelect(choice);
     System.out.println(" ");
-  }   
+  }
 
   public ArrayList<String> printOptions() {
     String nextLine;
@@ -300,7 +339,7 @@ public class Game {
     String operation = input.substring(0, 1);
     int amountIncreased = Integer.parseInt(input.substring(0, indexOfSpace));
     String statChanged = input.substring(indexOfSpace + 1);
-  
+
     if (operation.equals("-")) {
         amountIncreased = 0 - amountIncreased;
     }

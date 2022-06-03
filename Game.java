@@ -35,6 +35,8 @@ public class Game{
       _lover.play(_lover.getStory());
   }
 
+  
+
   public void chooseYourfighter() {
     String response = _scanner.nextLine();
 
