@@ -5,10 +5,12 @@ public class StoryNode
 
   File _cargo;
   StoryNode _lt, _rt, _mid;
+  String path;
 
   StoryNode( String pathToFile )
   {
     _cargo = new File(pathToFile);
+    path = pathToFile;
   }
 
   StoryNode getLeft()
@@ -26,28 +28,31 @@ public class StoryNode
     return _mid;
   }
 
+  int getNumberOfChildren() {
+      int counter = 0;
+      if (getLeft() != null) {
+          counter++;
+      }
+      if (getMid() != null) {
+        counter++;
+      }
+      if (getRight() != null) {
+        counter++;
+      }
 
-  /**
-   * Returns the value stored in this tree node.
-   */
+      return counter;
+  }
+
   File getValue()
   {
     return _cargo;
   }
 
-
-  /**
-   * Sets the value of the left subtree of this node.
-   */
   void setLeft( StoryNode theNewLeft )
   {
     _lt = theNewLeft;
   }
 
-
-  /**
-   * Sets the value of the right subtree of this node.
-   */
   void setRight( StoryNode theNewRight )
   {
     _rt = theNewRight;
@@ -58,16 +63,18 @@ public class StoryNode
     _mid = theNewMid;
   }
 
-
-  /**
-   * Sets the value of this tree node.
-   */
   void setValue( String newFilePath )
   {
     _cargo = new File(newFilePath);
   }
 
   public String toString() {
-      return _cargo.getPath();
+      String name = path;
+      while (name.indexOf("/") != -1) {
+          name = name.substring(name.indexOf("/") + 1);
+      }
+
+      return name.substring(0, name.indexOf("."));
   }
+  
 }//end class

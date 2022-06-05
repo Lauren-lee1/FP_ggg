@@ -341,11 +341,11 @@ public class Game {
         System.out.println(input);
     }
     if (statChanged.equals("intelligence")) {
-        _player.setConfidence(_player.getIntelligence() + amountIncreased);
+        _player.setIntelligence(_player.getIntelligence() + amountIncreased);
         System.out.println(input);
     }
     if (statChanged.equals("kindness")) {
-        _player.setConfidence(_player.getKindness() + amountIncreased);
+        _player.setKindness(_player.getKindness() + amountIncreased);
         System.out.println(input);
     }
   }

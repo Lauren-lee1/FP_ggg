@@ -11,6 +11,15 @@ ArrayList<Item> inventory;
     money = 0;
   }
 
+  public void printStats() {
+    System.out.println(_name + " | $" + money);
+    System.out.println("=================");
+    System.out.println("confidence: " + _confidence);
+    System.out.println("intelligence: " + _intelligence);
+    System.out.println("kindness: " + _kindness);
+    System.out.println("=================");
+  }
+
   public double getAffection(LoveInterest lover) {
       return -1;
   }
