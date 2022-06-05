@@ -32,6 +32,11 @@ wow! oo!...
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The original plan for loading new dialogue when the player answers a prompt was to have a file for each option. 
+We tried to find a workaround because we wanted fewer text files, but that complicated things, and then the confusion
+was compounded by missing files and code resulting either from accidental deletions or forgetting to commit.
+In the end, v4, the version with the workaround, became so buggy that we just changed back to our original plan
+
 we changed ___ to ___ bc...
 
 LESSONS LEARNED
@@ -89,14 +94,14 @@ Laur and Kli :: Implemented a way to prompt the player with a decision, and then
 2022-06-01
 --------------------------------------------------------------
 KXiao :: wrote the personality test
-LLee :: Coded in the personality test
+Laur :: Coded in the personality test
 Kli :: Enhanced prompting so there can be more than 2 choices, and allowed for stat changes depending on choice
 All :: discussed and clarified algo
-LLee :: set KXiao's story, put cafe dialogue into file, augmented so each date is a node. Each dialogue set in the node can be converted into a stack to be popped out
+Laur :: set KXiao's story, put cafe dialogue into file, augmented so each date is a node. Each dialogue set in the node can be converted into a stack to be popped out
 ==============================================================
 2022-06-02
 --------------------------------------------------------------
-LLee ::
+Laur ::
 * augmented prompt() to run through different scenarios depending on selected response in prompt
 * augmented play to recognize scenarios of prompt()
 * created play(node) that sets the node's dialogue to a stack that will be played.
@@ -110,3 +115,6 @@ KLi ::
 * v4alt notably diverges from v4 in that there is no traverse() method, and play() only serves to print dialogue and otherwise does not change instance variables
 * created actionSelect() in which you can add new keywords and actions to be detected
 ==============================================================
+2022-06-05
+--------------------------------------------------------------
+Laur and Kli :: removed v4alt and created v5 instead. Resolved a split that led to the creation of alt versions. A lot of things went wrong with v4
