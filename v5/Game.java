@@ -1,4 +1,4 @@
-package v4alt;
+package v5;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -36,41 +36,40 @@ public class Game {
 
   public void personalityTest(){
     System.out.println("Are you a human?");
-    System.out.println("1. yes \n2.no");
-    String response = _scanner.nextLine();
-    while(!response.equals("1") && !response.equals("2")){
-      System.out.println("That is not a valid option");
-      response = _scanner.nextLine();
-    }
-    if (response.equals("1")){
+    if (yes()) {
       _player.setIntelligence(_player.getIntelligence()+10);
-    } else if (response.equals("2")){
+    } else {
       _player.setConfidence(_player.getConfidence()+10);
     }
+
     System.out.println("Do you like computer science?");
-    System.out.println("1. yes \n2.no");
-    response = _scanner.nextLine();
-    while(!response.equals("1") && !response.equals("2")){
-      System.out.println("That is not a valid option");
-      response = _scanner.nextLine();
-    }
-    if (response.equals("1")){
+    if (yes()) {
       _player.setKindness(_player.getKindness()+10);
-    } else if (response.equals("2")){
+    } else {
       _player.setIntelligence(_player.getIntelligence()+10);
     }
+
     System.out.println("Would you steal an opportunity from another person even if you thought that opportunity would be way more useful for the other person?");
-    System.out.println("1. yes \n2.no");
-    response = _scanner.nextLine();
+    if (yes()){
+      _player.setConfidence(_player.getConfidence()+10);
+    } else {
+      _player.setKindness(_player.getKindness()+10);
+    }
+  }
+
+  public boolean yes() {
+    System.out.println("1. yes \n2. no");
+    String response = _scanner.nextLine();
+
     while(!response.equals("1") && !response.equals("2")){
       System.out.println("That is not a valid option");
       response = _scanner.nextLine();
     }
-    if (response.equals("1")){
-      _player.setConfidence(_player.getConfidence()+10);
-    } else if  (response.equals("2")){
-      _player.setKindness(_player.getKindness()+10);
+
+    if (response.equals("1")) {
+        return true;
     }
+    return false;
   }
 
   public void chooseYourfighter() {
@@ -89,15 +88,23 @@ public class Game {
     }
   }
 
-  //v4alt: augmented to be able to end the game
   public void play() {
     _lover.addLines(_story.getValue());
+    if (_playerPath.indexOf(_story) == -1) {
+        _playerPath.add(_story);
+    }
 
     while (!_dialogue.isEmpty()) {
-        if (_dialogue.peek().equals("end()")) {
+        String currLine = _dialogue.peek().trim();
+
+        if(currLine.indexOf("|") != -1 ){
+            currLine = currLine.substring(1);
+            currLine = currLine.trim();
+        } else
+        if (currLine.equals("end()")) {
             _dialogue.clear();
         } else
-        if (_dialogue.peek().trim().equals("prompt()")) {
+        if (currLine.equals("prompt()")) {
             _dialogue.pop();
             prompt();
         } else {
@@ -106,56 +113,22 @@ public class Game {
     }
 
     menu();
-
   }
 
-  //v4alt: menu for selecting how you want to move down the story tree, and for replaying
-  //you will enter the menu after finishing a date
-  //dates finish when there is no more dialogue to be said. This could be because the story runs to its end, or a bad decision caused an early end
   public void menu() {
-      //getNumberOfChildren() is a new method that just returns how many children a node has
       int numberOfOptions = _story.getNumberOfChildren();
       int response = -1;
 
-      //if the node you are on has no children, then you can't progress the story any further
       if (numberOfOptions == 0) {
-          //give the player the option to revisit any nodes they went to on the way to this ending
-          System.out.print("\n");
-          System.out.println("You have reached the end of this story");
-          System.out.println("Enter a number between " + 1 + " and " + _playerPath.size() + " (both inclusive) to return to a previous point");
-
-          //_playerpath is an arraylist that stores all the nodes you've been to
-          //nodes are added to this list after the player has reached an ending in that node
-          System.out.println(_playerPath);
-
-          //after picking a node to go back to, remove that node and all nodes after
-          //ex: if the order of nodes I went to was: [intro, cafe, apocalypse] and I choose to return to cafe, _playerPath becomes [intro]
-          //if you return to cafe, you return the point after you completed cafe, so cafe is added back into the arraylist
-          while (true) {
-            try {
-                response = Integer.parseInt(_scanner.nextLine());
-                _lover.setStory(_playerPath.get(response - 1));
-                _story = _lover.getStory();
-
-                while (response - 1 < _playerPath.size()) {
-                    _playerPath.remove(response - 1);
-                }
-                break;
-            } catch (Exception e) {
-                System.out.println("That's not a valid response");
-            }
-          }
+          replay();
           numberOfOptions = _story.getNumberOfChildren();
-      }
+      } else {
 
-      //options in the menu
       System.out.println("===================MENU====================");
-      _playerPath.add(_story);
       System.out.println("you have completed the date: " + _story + "\n");
       System.out.println("What kind of date would you like to go on?");
       System.out.println("0: I'd like to see my stats");
 
-      //prints the names of the different date options. will only print as many options as the current node has children
       if (numberOfOptions >= 1) {
         System.out.println("1: " + _story.getLeft());
       }
@@ -166,7 +139,6 @@ public class Game {
         System.out.println("3: " + _story.getRight());
       }
 
-      //this is for the player to select which date to go on, and therefore which node to move to
       response = -1;
       while (true) {
           try {
@@ -174,15 +146,15 @@ public class Game {
               if (response > 0 && response <= numberOfOptions) {
                   break;
               }
-          } catch (Exception e) {
-              //System.out.println("That's not a valid response");
-          }
+          } catch (Exception e) {}
+
           if (response == 0) {
               _player.printStats();
-          } else System.out.println("That's not a valid response");
+          } else {
+              System.out.println("That's not a valid response");
+          }
       }
 
-      //this loads mroe dialogue into _story
       if (response == 1) {
         _story = _lover.moveLeft();
       }
@@ -193,9 +165,30 @@ public class Game {
         _story = _lover.moveRight();
       }
 
-      //and now that there's dialogue again, play() can loop
-      //basically menu() is a big refueling station
+    }
       play();
+  }
+
+  public void replay() {
+    System.out.println("You have reached the end of this story");
+    System.out.println("Enter the index of the date you'd like to return to");
+
+    System.out.println(_playerPath);
+
+    while (true) {
+        try {
+            int response = Integer.parseInt(_scanner.nextLine());
+            _lover.setStory(_playerPath.get(response));
+            _story = _lover.getStory();
+
+            while (response < _playerPath.size()) {
+                _playerPath.remove(response);
+            }
+            break;
+        } catch (Exception e) {
+            System.out.println("That's not a valid response");
+        }
+    }
   }
 
   public void prompt() {
@@ -218,7 +211,7 @@ public class Game {
         } catch (Exception e) {
             //System.out.println("That's not a valid response");
         }
-        System.out.println("That's not a valid response");
+
     }
 
     //get the option corresponding to the response

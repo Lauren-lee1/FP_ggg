@@ -1,4 +1,4 @@
-package v4alt;
+package v5;
 
 import java.util.Stack;
 import java.io.File;
@@ -23,7 +23,6 @@ public class LoveInterest extends Character{
     public void addLines(File lines) {
         try {
           fileReader = new Scanner(lines);
-          //fileReader.useDelimiter("\n");
       } catch (FileNotFoundException e) {
           System.out.println("Something went wrong in addLines(). Check that the file is named correctly and has the extension .txt");
           e.printStackTrace();

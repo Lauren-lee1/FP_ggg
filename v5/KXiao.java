@@ -1,9 +1,9 @@
-package v4alt;
+package v5;
 public class KXiao extends LoveInterest{
 
     public KXiao() {
         super("KXiao");
-        source = "v4alt/KXiaoLines/";
+        source = "v5/KXiaoLines/";
         setStory();
     }
 
