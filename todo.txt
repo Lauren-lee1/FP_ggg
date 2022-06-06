@@ -1,8 +1,13 @@
+- capture
+- add rest of cafe files
+- chracter bios
+- rest of script in files
+
 - more than one stat statChanged -- done
-- denote who is talkingn
+- denote who is talkingn -- done
 - clean repo
-- change stat for non prompt
-- file for all scenarios for KXiao
+- change stat for non prompt -- not needed for now
+- file for all scenarios for KXiao -- done
 - chracter bios
 - currency and shopping should come last
 - good ending vs capture?
