@@ -1,4 +1,4 @@
 prompt()
-What beverage would you like to start off with?
+Waiter: What beverage would you like to start off with?
 1 : Coffee / -10 intelligence; load(cafe_coffee.txt)
 2 : Tea / +10 intelligence; load(cafe_tea.txt)

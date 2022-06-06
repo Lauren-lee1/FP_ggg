@@ -1,6 +1,6 @@
 prompt()
-Hello my lovely, what is your name?
+KXiao: Hello my lovely, what is your name?
 1: <name> / +0 Kindness; +10 intelligence
 prompt()
-That's a wonderful name. My name is Kevin #1, pleased to make your acquaintance
+KXiao: That's a wonderful name. My name is Kevin #1, pleased to make your acquaintance
 1: Pleased to make yours

@@ -1,10 +1,10 @@
-A Cafe? That sounds wonderful. I'm craving some biscuits.
+Kxiao: A Cafe? That sounds wonderful. I'm craving some biscuits.
 prompt()
-What beverage would you like to start off with?
+Waiter: What beverage would you like to start off with?
 1 : Coffee / -10 intelligence; load(cafe_coffee.txt)
 2 : Tea / +10 intelligence; load(cafe_tea.txt)
 prompt()
-what food would you like to order?
-1 : ur mom / load(cafe_urmom.txt)
+Waiter: what food would you like to order?
+1 : ur mom / print(KXiao: What foul mouth you have! I won't stand for this) / end()
 2 : Anything you want /+5 kindness; +10 intelligence; load(cafe_anythingyouwant.txt)
 3 : I'll take this time… and this… and that.. / +10 confidence; -5 kindness; +5 intelligence; load(cafe_i'lltake.txt)

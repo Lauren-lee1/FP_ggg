@@ -1,5 +1,5 @@
-- more than one stat statChanged
-- denote who is talking
+- more than one stat statChanged -- done
+- denote who is talkingn
 - clean repo
 - change stat for non prompt
 - file for all scenarios for KXiao
