@@ -118,3 +118,9 @@ KLi ::
 2022-06-05
 --------------------------------------------------------------
 Laur and Kli :: removed v4alt and created v5 instead. Resolved a split that led to the creation of alt versions. A lot of things went wrong with v4
+==============================================================
+2022-06-07
+--------------------------------------------------------------
+Kli :: added an arraylist that stores all possible loveinterests, added detection for capture(), which will remove the current loveinterest from the arraylist
+and send the player back to the personalitytest (for farming stats) before allowing the player to reselect their loveinterest, added a formal end to the game
+which occurs if the arraylist is empty

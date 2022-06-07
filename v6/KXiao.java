@@ -1,3 +1,4 @@
+package v6;
 public class KXiao extends LoveInterest{
 
     public KXiao() {
