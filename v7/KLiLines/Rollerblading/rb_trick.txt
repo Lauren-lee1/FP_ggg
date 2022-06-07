@@ -1,0 +1,6 @@
+You take Kevin in a twirl and spin him around
+KLi: Ahhhhh, wait wait what are you…
+prompt()
+KLi: Woahhhh I feel really dizzy now…
+1: It’s just a twirl… / print(Kli: I think I need to go home...); load()
+KXiaoLines think I need to go home… (exit date)

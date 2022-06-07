@@ -1,0 +1,6 @@
+Hey, my name is Kevin Li. What’s yours?
+<name>
+prompt()
+Pleased to meet you! What would you like to do for our date?
+1: Rollerblading
+2: Gaming cafe

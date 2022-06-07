@@ -24,7 +24,7 @@ public class Game {
 
       personalityTest();
 
-      /* 
+      /*
       System.out.println("1: KXiao");
       System.out.println("2: KLi");
       System.out.println("3. LLee");
@@ -214,6 +214,7 @@ public class Game {
 
     //print the question
     System.out.println(_dialogue.pop());
+    System.out.println("Please choose an option by entering the corresponding number");
 
     //print all options and store them
     effects = printOptions();
@@ -354,6 +355,7 @@ public class Game {
             _lover.moveRight();
         }
     }
+    System.out.println(_player.getName() + ": " +  input.substring(0, indexOfSlash));
   }
 
   public void changeStats(String input) {
