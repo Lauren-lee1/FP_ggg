@@ -307,7 +307,7 @@ public class Game {
         if (action.indexOf("load") != -1) {
             //if the current txt file is KXiaoLines/cafe/cafe.txt
             //First you get the path: KXiaoLines/cafe/cafe.txt
-            String path = _story.path;
+            String path = _story._path;
 
             //then you remove the part after the last slash
             //basically, we want to go up one level in the folders
@@ -339,10 +339,8 @@ public class Game {
         }
 
         //this is for if you want to print small enough that it doesn't warrant a separate file
-        //ex: print() hello
-        //yes the syntax is weird. This was made with a purpose that I ultimately abandoned so I just left it
         if (action.indexOf("print(") != -1) {
-            System.out.println(action.substring(7, action.length()-1));
+            System.out.println(action.substring(6, action.length()-1));
         }
 
         if (action.equals("left()")) {
@@ -361,25 +359,18 @@ public class Game {
 
   public void changeStats(String input) {
     int indexOfSpace = input.indexOf(" ");
-
-    String operation = input.substring(0, 1);
     int amountIncreased = Integer.parseInt(input.substring(0, indexOfSpace));
     String statChanged = input.substring(indexOfSpace + 1);
 
-    if (operation.equals("-")) {
-        amountIncreased = 0 - amountIncreased;
-    }
     if (statChanged.equals("confidence")) {
         _player.setConfidence(_player.getConfidence() + amountIncreased);
-        System.out.println(input);
     }
     if (statChanged.equals("intelligence")) {
         _player.setIntelligence(_player.getIntelligence() + amountIncreased);
-        System.out.println(input);
     }
     if (statChanged.equals("kindness")) {
         _player.setKindness(_player.getKindness() + amountIncreased);
-        System.out.println(input);
     }
+    System.out.println(input);
   }
 }
