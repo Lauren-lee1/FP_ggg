@@ -1,4 +1,4 @@
-package v6;
+package v7;
 public class Item {
     String name;
     double price;

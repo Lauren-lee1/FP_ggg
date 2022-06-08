@@ -1,4 +1,4 @@
-package v6;
+package v7;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -341,8 +341,8 @@ public class Game {
         //this is for if you want to print small enough that it doesn't warrant a separate file
         //ex: print() hello
         //yes the syntax is weird. This was made with a purpose that I ultimately abandoned so I just left it
-        if (action.indexOf("print()") != -1) {
-            System.out.println(action.substring(8));
+        if (action.indexOf("print(") != -1) {
+            System.out.println(action.substring(7, action.length()-1));
         }
 
         if (action.equals("left()")) {
