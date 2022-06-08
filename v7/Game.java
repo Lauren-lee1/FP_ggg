@@ -247,16 +247,19 @@ public class Game {
   public ArrayList<String> printOptions() {
     String nextLine;
     ArrayList<String> effects = new ArrayList<String>();
+    Integer counter = 1;
 
     while(!_dialogue.empty()) {
         nextLine = _dialogue.peek();
 
-        if (nextLine.indexOf(":") != -1) {
+
+        if (nextLine.length() > 0 && nextLine.substring(0,1).equals(counter.toString())) {
             effects.add(nextLine);
             if (nextLine.indexOf("/") != -1) {
                 nextLine = nextLine.substring(0, nextLine.indexOf("/"));
             }
             System.out.println(nextLine);
+            counter++;
         } else break;
 
         _dialogue.pop();
@@ -276,7 +279,7 @@ public class Game {
     }
 
     //choice is a string of everything after the /
-    String choice = input.substring(indexOfSlash + 1).toLowerCase();
+    String choice = input.substring(indexOfSlash + 1);
     //actions is an array of all the actions. A single option can play multiple options. Actions are separated with a ;
     String[] actions = choice.split(";");
 

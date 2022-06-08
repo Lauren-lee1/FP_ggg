@@ -10,6 +10,9 @@ public class KLi extends LoveInterest{
     public void setStory() {
         //root
         _story = new StoryNode(source + "intro.txt");
+
+        StoryNode rollerblading = new StoryNode(source + "Rollerblading/Rollerblading.txt");
+        _story.setLeft(rollerblading);
     }
 
     public void receiveItem() {

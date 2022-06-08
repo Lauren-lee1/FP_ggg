@@ -1,6 +1,13 @@
-Hey, my name is Kevin Li. What’s yours?
-<name>
 prompt()
-Pleased to meet you! What would you like to do for our date?
-1: Rollerblading
-2: Gaming cafe
+KLi: Hey, my name is Kevin Li. What’s yours?
+1: (tell him your name)
+
+Kli: Pleased to meet you!
+I don't have much planned for today.
+But tomorrow, we could go rollerblading or go to a gaming cafe
+
+prompt()
+KLi: Do either of those options sound good to you?
+1: Rollerblading sounds fun / print(KLi: That's great to hear!)
+2: Gaming sounds epic cool poggers pogchamp / print(KLi: That's uhh... some interesting vocab)
+3: (release the real KLi) / print(KLi: Why did you suddenly start chanting? Wait where are you goi-)

@@ -1,5 +1,4 @@
 KLi: Rollerblading? That sounds fun! Let's go / +5 Confidence
-<name>
 At the date...
 prompt()
 Are you all set with your gear?
