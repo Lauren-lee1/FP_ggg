@@ -1,13 +1,13 @@
 prompt()
-VOLLEYBALL YOU SAY? I LOVE VOLLEYBALL!
+KXiao: VOLLEYBALL YOU SAY? I LOVE VOLLEYBALL!
 1 : Um, do you know any courts nearby?
-OF COURSE< FOLLOW ME MUAHAHAHHA
+KXiao: OF COURSE FOLLOW ME MUAHAHAHHA
 An hour later..
 prompt()
-We're here! My favorite volleyball court!
+KXiao: We're here! My favorite volleyball court!
 1 :  Um, doesn't this look a bit shady?
 prompt()
-Shady? Ridiculous. This is the prime spot to play volleyball. Are you up to the challenge?
+KXiao: Shady? Ridiculous. This is the prime spot to play volleyball. Are you up to the challenge?
 1 : Of course, I'll floor you / +5 confidence; +5 intelligence
 2 : I'll give it my best try! / +5 kindness
 3 : Maybe another time... / end()
