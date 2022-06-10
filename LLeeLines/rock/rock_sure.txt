@@ -1,0 +1,5 @@
+Llee: If you move your hand here… and you move your other hand there…
+prompt()
+LLee:: Nice! You got the technique down!
+1: easy peasy / +5 confidence; print(You have natural talent for this! Let’s go on another rock climbing adventure some other time?); capture()
+2: This is fun! / print(You know what’s also fun…. Your mother LOL.); exit()

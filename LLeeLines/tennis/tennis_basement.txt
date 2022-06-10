@@ -1,0 +1,4 @@
+prompt()
+LLee: Of course! Any self respectable professional is able to play tennis at any given time of the day.
+1:  Have you considered touching grass? / load(tennis_grass.txt)
+2: Woah that's actually really cool! / +10 Kindness; print(LLee: Thank you! A lot of people judge me for being so dedicated, but i say perfect practice makes perfect.)

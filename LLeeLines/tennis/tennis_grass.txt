@@ -1,0 +1,7 @@
+prompt()
+LLee: what do you mean, I touch grass everyday in my basement playing tennis?
+1: Ah okay..
+prompt()
+Are you judging me right now?
+1: No….
+You…. tennis is life! / exit()

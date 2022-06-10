@@ -1,0 +1,12 @@
+prompt()
+LLee: Ooh, rock climbing! I love rock climbing.
+1: I'll destroy you/ +10 Confidence
+2: I have no chance then...haha / +10 intelligence
+A few hours later...
+prompt()
+Wow, you're very good at this!
+1: I could say the same haha...this a fun!
+prompt()
+LLee: I can show you a few technique if you want...
+1: sure / +5 Kindness; load(rock_sure.txt)
+2: Maybe another time... / print(Thats a shame… but there won’t be a next time.); exit()

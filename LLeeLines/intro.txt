@@ -1,0 +1,10 @@
+prompt()
+LLee: Hi I’m Kevin Laur! What’s your name?
+1. <name>
+prompt()
+LLee: #1 Your name is a red flag…
+1: Huh? Your name is literally Kevin…
+prompt()
+LLee: Oh right I forgot. Anyways, what do you want to do?
+1: tennis / 
+2: rock climbing

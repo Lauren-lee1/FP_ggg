@@ -1,0 +1,6 @@
+LLee: Anyways, lets play!
+A few hours later….
+prompt()
+LLee: Hehe, another day of dominating a beginner…
+1: Hey, you cheated! / +5 Confidence; print(It’s not cheating if I’m just better… maybe you shouldn’t be a sore loser); exit()
+2: Congratulations on the win... / +10 kindness; -5 intelligence; print(Thank you! Let’s play again some other time!); capture()
