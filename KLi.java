@@ -18,11 +18,14 @@ public class KLi extends LoveInterest{
         _story.setMid(gaming);
 
         StoryNode what = new StoryNode(_source + "what/what.txt");
-        _story.setMid(what);
+        _story.setRight(what);
     }
 
-    public void receiveItem() {
-
+    public void printBlurb() {
+        String output = "";
+        output += "A league player. Perhaps intelligence isn’t the way to go with this man, but kindness and being confident will help? I don’t even" + "\n";
+        output += "know man league players… Don’t go too hard with the athletic side or else there might be an accident..." + "\n";
+        System.out.println(output);
     }
 
 }

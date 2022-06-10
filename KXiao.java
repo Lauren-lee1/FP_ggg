@@ -21,8 +21,12 @@ public class KXiao extends LoveInterest{
         _story.setRight(vb);
     }
 
-    public void receiveItem() {
-
+    public void printBlurb() {
+        String output = "";
+        output += "The most alpha chad of the chads. They call him the GIGA-chad, pronounced GIIIIIIGGGGAAAAAAA CHAAAAAAAAD. 6'7," + "\n";
+        output += "talks to multiple women, known playboy, needs to shower believing that his 3 dollar deodorant can last him throughout the year." + "\n";
+        output += "He is known to be extremely arrogant and narcissistic, so perhaps being more confident and intelligent will show him that you are his equal?" +"\n";
+        System.out.println(output);
     }
 
 }

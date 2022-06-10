@@ -17,8 +17,11 @@ public class LLee extends LoveInterest{
         _story.setMid(rock);
     }
 
-    public void receiveItem() {
-
+    public void printBlurb() {
+        String output = "";
+        output += "Confidence, kindness, and intelligence, for Kevin Laur you have to have it all. Extremely competitive and confident in sports, it" + "\n";
+        output += "will take immense talent for you to one-up them. Show your confidence, kindness, and intelligence and conquer this Kevin!" + "\n";
+        System.out.println(output);
     }
 
 }

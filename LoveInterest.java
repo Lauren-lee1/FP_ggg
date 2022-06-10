@@ -77,4 +77,8 @@ public class LoveInterest {
         return _name;
     }
 
+    public void printBlurb() {
+        
+    }
+
 }

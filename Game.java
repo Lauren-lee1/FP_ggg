@@ -99,7 +99,9 @@ public class Game {
                 _dialogue = _lover.getDialogue();
                 _playerPath = new ArrayList<StoryNode>();
 
-                System.out.print("You have selected " + _lover.getName() + "\n");
+                System.out.println("You have selected " + _lover.getName());
+                System.out.println("=======================");
+                _lover.printBlurb();
                 break;
             }
         } catch (Exception e) {
