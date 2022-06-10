@@ -17,5 +17,5 @@ This is a dating sim. There are 3 characters, each with different dates that lea
 
 ## How-To-Launch Instructions
 
-$javac Woo.java  
+$javac *.java  
 $java Woo
