@@ -4,4 +4,4 @@ KLi: You're so good at valorant??? Okay I will surely beat you in CSGO!
 prompt()
 KLi: I lost? How...
 1: LEAGUE NEXT THE GRIND DONT STOP / print(KLi: No please no more... You're going to make me cry...)
-2: We can take a break... (requires >10 intelligence) / >10 intelligence
+2: We can take a break... / >10 intelligence; print(KLi: alright... sure)

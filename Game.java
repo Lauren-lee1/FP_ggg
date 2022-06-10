@@ -332,16 +332,18 @@ public class Game {
           }
           if (stat.equals("intelligence")) {
               canChoose = (_player.getIntelligence() > amount);
+              stat = _player.getIntelligence() + " " + stat;
           }
           if (stat.equals("kindness")) {
               canChoose = (_player.getKindness() > amount);
+              stat = _player.getKindness() + " " + stat;
           }
 
           if (!canChoose) {
               System.out.println("Your " + stat + " isn't high enough to pick this option");
+              return canChoose;
           }
 
-          return canChoose;
         }
 
         if (action.indexOf("load") != -1) {
