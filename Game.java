@@ -1,5 +1,6 @@
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Stack;
@@ -26,6 +27,7 @@ public class Game {
       _player = new Player(name);
       _playerPath = new ArrayList<StoryNode>();
       _StackOfMen = new Stack<>();
+      //playSecretEnding();
 
       personalityTest();
   }
@@ -313,10 +315,11 @@ public class Game {
             _StackOfMen.add(_lover);
             if (_listOfLovers.size() == 0) {
                 if (_StackOfMen.size() == 0) {
-                    System.out.println("You have dated all the characters");
-                    System.out.println("Congratulations, the game is finished");
-                    System.exit(0);
+                    playSecretEnding();
                 }
+                System.out.println("You have dated all the characters");
+                System.out.println("Congratulations, the game is finished");
+                System.exit(0);
             } else {
                 System.out.println("You have concluded your relationship with " + _lover.getName());
                 System.out.println("Now returning to the personality test (you can farm up stats)");
@@ -420,4 +423,24 @@ public class Game {
     catch (InterruptedException e) {
     	}
     }
+
+  public void playSecretEnding() {
+      File file = new File("SecretEndingDoNotLook.txt");
+      Scanner scanner;
+    try {
+        scanner = new Scanner(file);
+        while (scanner.hasNextLine()) {
+            String nextLine = scanner.nextLine();
+            if (nextLine.indexOf("<name>") != -1) {
+                System.out.println(_player.getName() + nextLine.substring(6));
+            } else {
+                System.out.println(nextLine);
+            }
+            wait(1500);
+        }
+        System.exit(0);
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    }
+  }
 }
