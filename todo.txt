@@ -1,3 +1,7 @@
+ - wait time between lines 
+ - make <name> actually be the player's name
+ - stats
+
 - character bios
 - rest of script in files
 
