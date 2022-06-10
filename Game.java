@@ -321,13 +321,14 @@ public class Game {
 
         //syntax: >5 intelligence
         if (action.indexOf(">") != -1){
-          int indexOfSpace = input.indexOf(" ");
+          int indexOfSpace = action.indexOf(" ");
           int amount = Integer.parseInt(action.substring(1, indexOfSpace));
           String stat = action.substring(indexOfSpace + 1);
           boolean canChoose = false;
 
           if (stat.equals("confidence")) {
               canChoose = (_player.getConfidence() > amount);
+              stat = _player.getConfidence() + " " + stat;
           }
           if (stat.equals("intelligence")) {
               canChoose = (_player.getIntelligence() > amount);
@@ -337,7 +338,7 @@ public class Game {
           }
 
           if (!canChoose) {
-              System.out.println("You can't choose that option");
+              System.out.println("Your " + stat + " isn't high enough to pick this option");
           }
 
           return canChoose;
