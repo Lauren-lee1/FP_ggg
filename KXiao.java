@@ -4,10 +4,10 @@ public class KXiao extends LoveInterest{
     public KXiao() {
         super("KXiao");
         _source = "KXiaoLines/";
-        setStory();
+        setup();
     }
 
-    public void setStory() {
+    public void setup() {
         //root
         _story = new StoryNode(_source + "intro.txt");
 

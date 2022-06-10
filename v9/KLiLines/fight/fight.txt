@@ -1,0 +1,21 @@
+???: Oh? you're approaching me?
+Kevin: We can't beat you up without getting closer
+???: Then come as close as you'd like
+What will you do?
+1: punch the mysterious man
+2: stop time
+3: bow down to KXiao
+4: bow down to KXiao
+5: bow down to KXiao
+6: bow down to KXiao
+KXiao: Hah! I won't even let you try. I knew you were planning to fight me. I could see in in the text files
+7: bow down to KXiao
+KXiao: We're just going to stay here forever.
+8: bow down to KXiao
+KXiao: And you'll never reach the truth
+9: bow down to KXiao
+prompt() 
+10: bow down to KXiao
+1. refuse / print(KXiao: What? How did you escape... No... You couldn't be); load(refuse.txt)
+2. accept / print(KXiao: good. Now both of you, get in the stack); capture()
+

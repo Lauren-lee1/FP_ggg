@@ -7,7 +7,6 @@ public class StoryNode
   File _cargo;
   StoryNode _lt, _rt, _mid;
   String _path;
-  String _requirement;
 
   StoryNode( String pathToFile )
   {
@@ -68,33 +67,6 @@ public class StoryNode
   void setValue( String newFilePath )
   {
     _cargo = new File(newFilePath);
-  }
-
-  void setRequirement(String requirement) {
-      _requirement = requirement;
-  }
-
-  boolean allows(Player player) {
-      int index = _requirement.indexOf(">");
-      
-      if (index != -1) {
-          String stat = _requirement.substring(0, index);
-          String number = _requirement.substring(index + 1);
-          stat = stat.trim();
-          number = number.trim();
-
-          if (stat.equals("intelligence")) {
-            return (player.getIntelligence() > Integer.parseInt(number));
-          }
-          if (stat.equals("confidence")) {
-            return (player.getConfidence() > Integer.parseInt(number));
-          }
-          if (stat.equals("kindness")) {
-            return (player.getKindness() > Integer.parseInt(number));
-          }  
-      }
-
-      return false;
   }
 
   public String toString() {

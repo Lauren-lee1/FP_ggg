@@ -140,5 +140,5 @@ KLi :: experimented with making stat requirements to go on certain dates
 2022-06-09
 --------------------------------------------------------------
 Laur :: created a way to detect stat requirements and act accordingly
-KLi :: multiple bug fixes and removed excess code, largest chunk of which was the entire Character.java file
+KLi :: multiple bug fixes and removed excess code, largest chunk of which was the entire Character.java file. Implemented secret ending
 KXiao :: Finished writing secret endings

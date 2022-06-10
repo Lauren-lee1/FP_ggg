@@ -39,8 +39,8 @@ public class LoveInterest {
       addLine(line);
     }
 
-    public void receiveItem() {
-        System.out.println("thanks for the gift");
+    public void setup() {
+        
     }
 
     public Stack<String> getDialogue() {
@@ -78,7 +78,7 @@ public class LoveInterest {
     }
 
     public void printBlurb() {
-        
+
     }
 
 }

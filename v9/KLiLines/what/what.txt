@@ -1,0 +1,25 @@
+prompt()
+Kevin: Hello? Are you alright?
+1: Yeah / +5 confidence; print(Kevin: Good, let's keep moving)
+2: No / -5 confidence; print(Kevin: We'll make it there soon, just hang in there)
+3: Huh? Who are you? / print(Kevin: What? What do you mean? Nevermind there's no time. We have to keep moving)
+You look up to see the edge of the world ahead of you
+The two of you are a few minutes away from it
+prompt()
+Suddenly, you hear something crash down behind you
+1: turn back / load(turnBack.txt)
+2: keeping running / load(keepRunning.txt)
+You begin to walk towards the mysterious figure
+As you get closer, you see him holding a strange stone
+On closer inspection, it's a bar of deodorant
+prompt()
+???: I can't believe you hid your story from me like that. This is why I hate men.
+1: Who? me? / -5 intelligence; print(???: No, not you. Him. The inferior Kevin.)
+2: Him? / +5 intelligence; print(???: Who else?)
+???: I wrote a perfect story for you, and you decide to do this behind my back? Unbelievable!
+Kevin: You wrote me dying because I went too fast on rollerblades
+???: That was just one possible outcome
+Kevin: The other outcomes were me getting bullied in video games I don't play
+???: That's irrelevant
+prompt()
+???: Anyways, what is it that you came up to me for?

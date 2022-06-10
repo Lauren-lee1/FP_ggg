@@ -1,0 +1,11 @@
+KXiao: Haha, I'll go easy on you
+prompt()
+KXiao: Wow that was a really close match, You're very gifted at the game.
+1 : (Whisper) Well ... my opponent wasn't very good...
+prompt()
+KXiao: What was that?
+1 : Nothing...haha...
+KXiao: let's play again some other time!
+prompt()
+1 : sure! / capture()
+2: I'm not sure about that / end()

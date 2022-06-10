@@ -8,9 +8,9 @@ public class Player{
 
   public Player(String name) {
       _name = name;
-      _confidence = 0;
-      _intelligence = 0;
-      _kindness = 0;
+      _confidence = 110;
+      _intelligence = 110;
+      _kindness = 110;
   }
 
   public void printStats() {

@@ -1,0 +1,5 @@
+KLi: Ah, that would be great, thank you.
+prompt()
+KLi: I think I'm starting to get the hang of it! This is pretty relaxing now that I know how to do it.
+1: Wanna learn a trick? / +5 Kindness; +5 intelligence; load(rollerblading_trick.txt)
+2: Wanna increase the speed a little? / +5 Confidence; load(rollerblading_speed.txt)

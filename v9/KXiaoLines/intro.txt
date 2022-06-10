@@ -1,0 +1,6 @@
+prompt()
+KXiao: Hello my lovely, what is your name?
+1: <name> / +10 intelligence
+prompt()
+KXiao: That's a wonderful name. My name is Kevin #1, pleased to make your acquaintance
+1: Pleased to make yours

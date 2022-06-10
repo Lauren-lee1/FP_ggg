@@ -1,0 +1,4 @@
+prompt()
+KLi: Gaming huh? They call me a gaming warlord. I'm RADIANT, CSGO Global Elite, FACEIT LVL 10, Challenger on League, RANK #1 Apex Predator, Rocket League Supersonic Legend, Chess Grandmaster, #1 FNCS World Champion, Rank 1 Gym Pokemon Go.
+1: Um... interesting...? / +5 Kindness; load(gaming_interesting.txt)
+2: I'm literally better than you. Sit down. / +10 Confidence; load(gaming_better.txt)

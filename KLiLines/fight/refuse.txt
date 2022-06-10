@@ -1,0 +1,15 @@
+prompt()
+What will you do?
+1: punch KXiao 
+You throw a punch at KXiao but narrowly miss as he backflips into the air and does a quintuple somersault
+KXiao: I didn't expect you to be here. Well now my plans are foiled.
+KXiao: GIIIIIIGGGGAAAAAAA CHAAAAAAAAD OUTTTTTTT
+He vanishes in a flash of light
+
+Kevin: Well, I guess he's gone
+Kevin: I didn't expect you to be able to fight back in this state. But your work isn't finished, you need to chase after him. 
+Kevin: To do that, you need to go back to the beginning and not be tricked by his stories
+prompt()
+Kevin: Play through the stories without capturing anyone. Then you'll see the true ending to this charade
+1: Or i could just, you know, open the file that's on the front page of your repo / print(Kevin: well yeah, but that would be lame); return()
+2: Got it / print(Kevin: Good luck, Lauren. Rein your harem in); return()

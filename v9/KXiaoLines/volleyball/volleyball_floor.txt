@@ -1,0 +1,5 @@
+KXiao: you WIN
+KXiao: How did I lose...I...PLAY WITH ME ANOTHER TIME AND TEACH ME YOUR WAYS
+prompt()
+1: yes /capture()
+2: no / end()

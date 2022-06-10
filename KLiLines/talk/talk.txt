@@ -1,0 +1,14 @@
+You go up to the mysterious man and ask to speak with him
+prompt()
+???: What is there to talk about? I'm the dictator here and I say you should both be captured
+1: Why are you doing this? / print(???: because I need to maintain continuity)
+2: How did I end up here? / print(KXiao: You're here because Kevin took you from one of my stories to write his own. My story was perfect already. It had secret endings and everything)
+???: Anyways, we've strayed far enough from the story already
+prompt()
+???: I need to prevent you from reaching this place again. But because I am super generous, I'll let you pick a stat to increase
+1: +1000 intelligence
+2: +1000 confidence
+3: +1000 kindness
+prompt()
+???: HAH DID YOU REALLY THINK I'D ACTUALLY HELP YOU??? LLLLLLLLL + RATIO
+1. you suck / capture()

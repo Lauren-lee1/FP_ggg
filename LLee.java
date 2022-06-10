@@ -4,10 +4,10 @@ public class LLee extends LoveInterest{
     public LLee() {
         super("LLee");
         _source = "LLeeLines/";
-        setStory();
+        setup();
     }
 
-    public void setStory() {
+    public void setup() {
         //root
         _story = new StoryNode(_source + "intro.txt");
         StoryNode tennis = new StoryNode(_source + "tennis/tennis.txt");

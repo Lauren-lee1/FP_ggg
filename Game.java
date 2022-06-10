@@ -25,7 +25,6 @@ public class Game {
       System.out.println("What is your name?");
       String name = _scanner.nextLine();
       _player = new Player(name);
-      _playerPath = new ArrayList<StoryNode>();
       _StackOfMen = new Stack<>();
       //playSecretEnding();
 
@@ -34,7 +33,18 @@ public class Game {
 
   public void personalityTest(){
 
-    //wait(750);
+    if (_listOfLovers.size() == 0) {
+        if (_StackOfMen.size() == 0) {
+            playSecretEnding();
+        } else {
+            System.out.println("You have dated all the characters");
+            System.out.println("Congratulations, the game is finished");
+            System.exit(0);
+        }
+    }
+
+    System.out.println("=======Personality Test=======");
+    wait(750);
     System.out.println("Are you a human?");
     if (yes()) {
       _player.setIntelligence(_player.getIntelligence()+10);
@@ -42,7 +52,7 @@ public class Game {
       _player.setConfidence(_player.getConfidence()+10);
     }
 
-    //wait(750);
+    wait(750);
     System.out.println("Do you like computer science?");
     if (yes()) {
       _player.setKindness(_player.getKindness()+10);
@@ -50,7 +60,7 @@ public class Game {
       _player.setIntelligence(_player.getIntelligence()+10);
     }
 
-    //wait(750);
+    wait(750);
     System.out.println("Would you steal an opportunity from another person even if you thought that opportunity would be way more useful for the other person?");
     if (yes()){
       _player.setConfidence(_player.getConfidence()+10);
@@ -58,9 +68,10 @@ public class Game {
       _player.setKindness(_player.getKindness()+10);
     }
 
-    //wait(750);
+    wait(750);
     System.out.println("These are your stats:");
     _player.printStats();
+    System.out.print("\n");
     chooseYourfighter();
   }
 
@@ -81,6 +92,7 @@ public class Game {
 
   public void chooseYourfighter() {
 
+    System.out.println("=======Choose Your Fighter=======");
     System.out.println("These are your dates:");
     int counter = 0;
     for (LoveInterest lover : _listOfLovers) {
@@ -95,9 +107,11 @@ public class Game {
 
             if (response > 0 && response <= _listOfLovers.size()) {
                 _lover = _listOfLovers.get(response - 1);
+                _lover.setup();
                 _story = _lover.getStory();
                 _dialogue = _lover.getDialogue();
                 _playerPath = new ArrayList<StoryNode>();
+                _playerPath.add(_story);
 
                 System.out.println("You have selected " + _lover.getName());
                 System.out.println("=======================");
@@ -114,17 +128,11 @@ public class Game {
 
   public void play() {
     _lover.addLines(_story.getValue());
-    if (_playerPath.indexOf(_story) == -1) {
-        _playerPath.add(_story);
-    }
 
     while (!_dialogue.isEmpty()) {
         String currLine = _dialogue.peek().trim();
 
-        //wait(750);
-        if (currLine.equals("end()")) {
-            _dialogue.clear();
-        } else
+        wait(750);
         if (currLine.equals("prompt()")) {
             _dialogue.pop();
             prompt();
@@ -137,7 +145,8 @@ public class Game {
   }
 
   public void menu() {
-      //wait(750);
+
+      wait(750);
       int numberOfOptions = _story.getNumberOfChildren();
       int response = -1;
 
@@ -188,14 +197,18 @@ public class Game {
       }
 
     }
+      if (_playerPath.indexOf(_story) == -1) {
+        _playerPath.add(_story);
+      }
       play();
   }
 
   public void replay() {
-    //wait(750);
+    wait(750);
     System.out.println("You have reached the end of this story");
     System.out.println("Do you want to keep dating this person?");
     if (!yes()) {
+        System.out.println(_lover.getName() + " has been deleted from this plane of existence");
         System.out.println("Now returning to the personality test (you can farm up stats)");
         _listOfLovers.remove(_lover);
         personalityTest();
@@ -208,6 +221,7 @@ public class Game {
             int response = Integer.parseInt(_scanner.nextLine());
             _lover.setStory(_playerPath.get(response));
             _story = _lover.getStory();
+            _dialogue = _lover.getDialogue();
 
             while (response < _playerPath.size()) {
                 _playerPath.remove(response);
@@ -220,7 +234,7 @@ public class Game {
   }
 
   public void prompt() {
-    //wait(750);
+    wait(750);
     ArrayList<String> effects;
 
     //print the question
@@ -234,12 +248,6 @@ public class Game {
     while (true) {
         try {
             response = Integer.parseInt(_scanner.nextLine());
-            if (response == 420) {
-                System.out.println(_dialogue);
-            }
-            if (response == 69) {
-                System.out.println(_dialogue.pop());
-            }
             if (response > 0 && response <= effects.size()) {
                 String choice = effects.get(response - 1);
                 if (actionSelect(choice)) {
@@ -312,22 +320,19 @@ public class Game {
             changeStats(action);
         }
 
+        if (action.equals("return()")) {
+            System.out.println("now returning to character select" + "\n");
+            _dialogue.clear();
+            chooseYourfighter();
+        }
+
         if (action.equals("capture()")) {
             _listOfLovers.remove(_lover);
             _StackOfMen.add(_lover);
-            if (_listOfLovers.size() == 0) {
-                if (_StackOfMen.size() == 0) {
-                    playSecretEnding();
-                }
-                System.out.println("You have dated all the characters");
-                System.out.println("Congratulations, the game is finished");
-                System.exit(0);
-            } else {
-                System.out.println("You have concluded your relationship with " + _lover.getName());
-                System.out.println("Now returning to the personality test (you can farm up stats)");
-                personalityTest();
-                chooseYourfighter();
-            }
+            System.out.println("You have captured " + _lover.getName() + " in your stack");
+            System.out.println("Now returning to the personality test (you can farm up stats)");
+            personalityTest();
+            chooseYourfighter();
         }
 
         //syntax: >5 intelligence
@@ -387,7 +392,6 @@ public class Game {
 
         //ends the current date
         if (action.equals("end()")) {
-            //play() runs while there is dialogue to be popped, so clearing the dialogue stops the loop
             _dialogue.clear();
         }
 
@@ -429,6 +433,7 @@ public class Game {
   public void playSecretEnding() {
       File file = new File("SecretEndingDoNotLook.txt");
       Scanner scanner;
+      System.out.println("============???============");
     try {
         scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
