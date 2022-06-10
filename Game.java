@@ -12,6 +12,7 @@ public class Game {
   Player _player;
   ArrayList<StoryNode> _playerPath;
   ArrayList<LoveInterest> _listOfLovers;
+  Stack<LoveInterest> _StackOfMen;
 
   public Game(){
       _listOfLovers = new ArrayList<>();
@@ -24,6 +25,7 @@ public class Game {
       String name = _scanner.nextLine();
       _player = new Player(name);
       _playerPath = new ArrayList<StoryNode>();
+      _StackOfMen = new Stack<>();
 
       personalityTest();
   }
@@ -308,10 +310,13 @@ public class Game {
 
         if (action.equals("capture()")) {
             _listOfLovers.remove(_lover);
+            _StackOfMen.add(_lover);
             if (_listOfLovers.size() == 0) {
-                System.out.println("You have dated all the characters");
-                System.out.println("Congratulations, the game is finished");
-                System.exit(0);
+                if (_StackOfMen.size() == 0) {
+                    System.out.println("You have dated all the characters");
+                    System.out.println("Congratulations, the game is finished");
+                    System.exit(0);
+                }
             } else {
                 System.out.println("You have concluded your relationship with " + _lover.getName());
                 System.out.println("Now returning to the personality test (you can farm up stats)");
