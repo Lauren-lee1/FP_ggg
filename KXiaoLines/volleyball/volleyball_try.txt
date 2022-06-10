@@ -7,5 +7,5 @@ KXiao: What was that?
 1 : Nothing...haha...
 KXiao: let's play again some other time!
 prompt()
-1 : sure!
+1 : sure! / capture()
 2: I'm not sure about that / end()
