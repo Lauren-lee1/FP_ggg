@@ -1,22 +1,20 @@
-public class Character{
+package v8;
+
+public class Player{
 
   String _name;
   int _confidence;
   int _intelligence;
   int _kindness;
 
-  //Stack<String> _dialogue;
-  //Scanner fileReader;
-
-  public Character(String name) {
+  public Player(String name) {
       _name = name;
-      //_dialogue = new Stack<String>();
       _confidence = 0;
       _intelligence = 0;
       _kindness = 0;
   }
 
-  public void getStats() {
+  public void printStats() {
       System.out.println(_name);
       System.out.println("=================");
       System.out.println("confidence: " + _confidence);

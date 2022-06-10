@@ -1,0 +1,6 @@
+KXiao: Lets see, I'll have this... and this...
+A couple hours later…
+prompt()
+KXiao: I had a great time today. By any chance, would you like to take me out to another date?
+1 : yes / capture()
+2 : no

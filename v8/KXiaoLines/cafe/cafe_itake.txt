@@ -1,0 +1,4 @@
+KXiao: Oh wow, I guess there won’t be enough space for food for me…
+A couple hours later.
+KXiao: I barely got to eat anything… Perhaps you aren’t the person for me.
+end()

@@ -1,0 +1,7 @@
+At the date...
+prompt()
+KLi: Are you all set with your gear?
+1: mhm
+KLi: Lets go...woahhhh...This is harder than I thought
+1: Lets go slower / +5 kindness; -5 confidence; load(rollerblading_slower.txt)
+2. FASTER FASTER FASTER / +10 confidence; -5 kindness; -5 intelligence; print(KLi: Okay, *slips and dies*); exit()

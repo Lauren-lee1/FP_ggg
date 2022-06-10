@@ -1,4 +1,4 @@
-
+package v8;
 public class KXiao extends LoveInterest{
 
     public KXiao() {

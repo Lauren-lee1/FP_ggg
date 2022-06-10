@@ -1,0 +1,6 @@
+KXiao: That was a fun ride! What to next?
+A couple hours later...
+prompt()
+KXiao: Thank you for the fun date! Hope to see you again sometime soon...
+1: sure / capture()
+2: No LOL / exit()
