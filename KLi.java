@@ -3,7 +3,7 @@ public class KLi extends LoveInterest{
 
     public KLi() {
         super("Kli");
-        _source = "v7/KLiLines/";
+        _source = "KLiLines/";
         setStory();
     }
 

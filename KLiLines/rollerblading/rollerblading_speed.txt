@@ -3,7 +3,7 @@ KLi: woah, look at how fast I'm going!
 1: You're still going pretty slow...
 prompt()
 KLi: What was that?
-1: ahem, mothing
+1: ahem, nothing
 prompt()
 KLi: This is pretty fun! Do you wanna go on another date after this?
 1: Yes / load(gaming.txt)

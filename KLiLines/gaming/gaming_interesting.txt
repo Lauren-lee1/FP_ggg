@@ -1,4 +1,4 @@
 prompt()
 KLi: Do you see how good I am? Very impressive record if I do say so myself. Do you wanna go for a round of league?
-1: Sure!; -10 intelligence print(KLi: Alright lets do this….); print(A couple games later...); exit()
-2: ew league what a terrible game; +!0 intelligence; print(KLi: How could you say that? League is the best game… This is ridiculous. I’m leaving); exit()
+1: Sure!; -10 intelligence print(KLi: Alright lets do this...); print(A couple games later...); exit()
+2: ew league what a terrible game; +10 intelligence; print(KLi: How could you say that? League is the best game… This is ridiculous. I'm leaving); exit()

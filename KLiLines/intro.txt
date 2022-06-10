@@ -1,6 +1,6 @@
 KLi: Hey, my name is Kevin Li. What's yours?
 <name>
-prmopt()
+prompt()
 Please to meet you! What yould you like to do for our date?
 1. Rollerblading / +5 confidence
 2. Gaming Cafe

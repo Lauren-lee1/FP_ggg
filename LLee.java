@@ -3,7 +3,7 @@ public class LLee extends LoveInterest{
 
     public LLee() {
         super("LLee");
-        _source = "v7/LLeeLines/";
+        _source = "LLeeLines/";
         setStory();
     }
 

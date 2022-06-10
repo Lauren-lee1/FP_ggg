@@ -3,7 +3,7 @@ public class KXiao extends LoveInterest{
 
     public KXiao() {
         super("KXiao");
-        _source = "v7/KXiaoLines/";
+        _source = "KXiaoLines/";
         setStory();
     }
 
