@@ -115,13 +115,6 @@ public class Game {
         String currLine = _dialogue.peek().trim();
 
         //wait(750);
-        if (currLine.indexOf("<name>") != -1) {
-            int indexOfName = currLine.indexOf("<name>");
-            String output = currLine.substring(0, indexOfName);
-            output += _player.getName();
-            output += currLine.substring(indexOfName + 5);
-            System.out.println(output);
-        }
         if (currLine.equals("end()")) {
             _dialogue.clear();
         } else
@@ -267,9 +260,10 @@ public class Game {
             }
             if (nextLine.indexOf("<name>") != -1) {
                 int indexOfName = nextLine.indexOf("<name>");
+                String temp = nextLine.substring(indexOfName + 6);
                 nextLine = nextLine.substring(0, indexOfName);
                 nextLine += _player.getName();
-                nextLine += nextLine.substring(indexOfName + 5);
+                nextLine += temp;
             }
 
             System.out.println(nextLine);
