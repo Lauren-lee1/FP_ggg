@@ -16,6 +16,9 @@ public class KLi extends LoveInterest{
 
         StoryNode gaming = new StoryNode(_source + "gaming/gaming.txt");
         _story.setMid(gaming);
+
+        StoryNode what = new StoryNode(_source + "what/what.txt");
+        _story.setMid(what);
     }
 
     public void receiveItem() {

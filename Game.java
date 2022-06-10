@@ -244,7 +244,7 @@ public class Game {
             }
         } catch (Exception e) {
             System.out.println("That's not a valid response");
-            e.printStackTrace();
+            //e.printStackTrace();
         }
 
     }
