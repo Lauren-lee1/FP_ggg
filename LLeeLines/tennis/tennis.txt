@@ -1,6 +1,6 @@
 LLee: I’m a tennis pro! Let’s go for a round.
 prompt()
-1:  Where are the courts?
+1: Where are the courts?
 prompt()
 LLee: Oh don’t worry, I got one in my basement!
 1: You have a tennis court in your basement??? / +5 intelligence; load(tennis_basement.txt)
