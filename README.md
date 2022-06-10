@@ -11,11 +11,11 @@ This is a game for incredibly attractive individuals such as yourself, and you w
 
 Translation: 
 This is a dating sim. There are 3 characters, each with different dates that lead to different endings. Reaching an ending with one of the characters results in one of 3 possibilities  
-1: the character being captured, meaning they are added to a stack and are removed from the list of characters you can date
-2: the character is removed from the list of datable characters but is not added to the stack
-3: the player can go back and replay a previous date.
+1: the character being captured, meaning they are added to a stack and are removed from the list of characters you can date  
+2: the character is removed from the list of datable characters but is not added to the stack  
+3: the player can go back and replay a previous date.  
 
 ## How-To-Launch Instructions
 
-$javac Woo.java  
+$javac *.java  
 $java Woo
