@@ -235,21 +235,20 @@ public class Game {
                 System.out.println(_dialogue.pop());
             }
             if (response > 0 && response <= effects.size()) {
-                break;
+                String choice = effects.get(response - 1);
+                if (actionSelect(choice)) {
+                    break;
+                }
+            } else {
+                System.out.println("That's not a valid response");
             }
         } catch (Exception e) {
-            //System.out.println("That's not a valid response");
+            System.out.println("That's not a valid response");
+            e.printStackTrace();
         }
 
     }
 
-    //get the option corresponding to the response
-    String choice = effects.get(response - 1);
-    //System.out.println("you chose " + choice);
-
-    //run the action corresponding to the option
-
-    actionSelect(choice);
     System.out.println(" ");
   }
 
@@ -323,8 +322,8 @@ public class Game {
         //syntax: >5 intelligence
         if (action.indexOf(">") != -1){
           int indexOfSpace = input.indexOf(" ");
-          int amount = Integer.parseInt(input.substring(1, indexOfSpace));
-          String stat = input.substring(indexOfSpace + 1);
+          int amount = Integer.parseInt(action.substring(1, indexOfSpace));
+          String stat = action.substring(indexOfSpace + 1);
           boolean canChoose = false;
 
           if (stat.equals("confidence")) {
