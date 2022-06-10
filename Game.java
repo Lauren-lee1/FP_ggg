@@ -316,6 +316,34 @@ public class Game {
             }
         }
 
+        if (action.indexOf("stats") != -1){
+          int indexOfSpace = input.indexOf(" ");
+          int amount = Integer.parseInt(input.substring(0, indexOfSpace));
+          String stat = input.substring(indexOfSpace + 1);
+
+          if (stat.equals("confidence")) {
+              if(_player.getConfidence < amount){
+                System.out.println("You can't choose this option. Please pick another obtion");
+                System.out.println("Choose another option");
+                return;
+              }
+          }
+          if (stat.equals("intelligence")) {
+            if(_player.getIntelligence < amount){
+              System.out.println("You can't choose this option. Please pick another obtion");
+              System.out.println("Choose another option");
+              return;
+            }
+          }
+          if (stat.equals("kindness")) {
+            if(_player.getIntelligence < amount){
+              System.out.println("You can't choose this option. Please pick another obtion");
+              System.out.println("Choose another option");
+              return;
+            }
+          }
+        }
+
         if (action.indexOf("load") != -1) {
             //if the current txt file is KXiaoLines/cafe/cafe.txt
             //First you get the path: KXiaoLines/cafe/cafe.txt
