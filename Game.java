@@ -242,6 +242,7 @@ public class Game {
     //System.out.println("you chose " + choice);
 
     //run the action corresponding to the option
+    
     actionSelect(choice);
     System.out.println(" ");
   }
@@ -253,7 +254,6 @@ public class Game {
 
     while(!_dialogue.empty()) {
         nextLine = _dialogue.peek();
-
 
         if (nextLine.length() > 0 && nextLine.substring(0,1).equals(counter.toString())) {
             effects.add(nextLine);
@@ -277,14 +277,12 @@ public class Game {
     return effects;
   }
 
-  //v4alt: a general method for detecting actions written into the txt files
-  public void actionSelect(String input) {
-    //adding a slash after an option in a prompt will play an action when that option is chosen
+  public boolean actionSelect(String input) {
     int indexOfSlash = input.indexOf("/");
 
-    //if there is no slash, there is no action, so just return and do nothing
+    //if there is no slash, there is no action, so just return and do nothing to avoid complications with everything else
     if (indexOfSlash == -1) {
-        return;
+        return true;
     }
 
     //choice is a string of everything after the /
@@ -294,7 +292,7 @@ public class Game {
 
     for (String a : actions) {
         //trim all the strings so we don't encounter problems with leading or trailing spaces
-        String action = a.trim();
+        String action = a.trim().toLowerCase();
 
         //detects and applies a stat change action
         //ex: +10 Kindness
@@ -316,32 +314,28 @@ public class Game {
             }
         }
 
-        if (action.indexOf("stats") != -1){
+        //syntax: >5 intelligence
+        if (action.indexOf(">") != -1){
           int indexOfSpace = input.indexOf(" ");
-          int amount = Integer.parseInt(input.substring(0, indexOfSpace));
+          int amount = Integer.parseInt(input.substring(1, indexOfSpace));
           String stat = input.substring(indexOfSpace + 1);
+          boolean canChoose = false;
 
           if (stat.equals("confidence")) {
-              if(_player.getConfidence < amount){
-                System.out.println("You can't choose this option. Please pick another obtion");
-                System.out.println("Choose another option");
-                return;
-              }
+              canChoose = (_player.getConfidence() > amount);
           }
           if (stat.equals("intelligence")) {
-            if(_player.getIntelligence < amount){
-              System.out.println("You can't choose this option. Please pick another obtion");
-              System.out.println("Choose another option");
-              return;
-            }
+              canChoose = (_player.getIntelligence() > amount);
           }
           if (stat.equals("kindness")) {
-            if(_player.getIntelligence < amount){
-              System.out.println("You can't choose this option. Please pick another obtion");
-              System.out.println("Choose another option");
-              return;
-            }
+              canChoose = (_player.getKindness() > amount);
           }
+
+          if (!canChoose) {
+              System.out.println("You can't choose that option");
+          }
+
+          return canChoose;
         }
 
         if (action.indexOf("load") != -1) {
@@ -379,22 +373,13 @@ public class Game {
         }
 
         //this is for if you want to print small enough that it doesn't warrant a separate file
-        if (action.indexOf("print(") != -1) {
-            System.out.println(action.substring(6, action.length()-1));
-        }
-
-        if (action.equals("left()")) {
-            _lover.moveLeft();
-        }
-
-        if (action.equals("mid()")) {
-            _lover.moveDown();
-        }
-
-        if (action.equals("right()")) {
-            _lover.moveRight();
+        if (action.indexOf("print") != -1) {
+            //We want to printed message to preserve capitalization
+            //the trim here is because we are working with a, which is untrimmed, and not lowercase
+            System.out.println(a.trim().substring(6, action.length()-1));
         }
     }
+    return true;
   }
 
   public void changeStats(String input) {

@@ -254,7 +254,6 @@ public class Game {
     while(!_dialogue.empty()) {
         nextLine = _dialogue.peek();
 
-
         if (nextLine.length() > 0 && nextLine.substring(0,1).equals(counter.toString())) {
             effects.add(nextLine);
             if (nextLine.indexOf("/") != -1) {
@@ -294,10 +293,10 @@ public class Game {
 
     for (String a : actions) {
         //trim all the strings so we don't encounter problems with leading or trailing spaces
-        String action = a.trim();
+        String action = a.trim().toLowerCase();
 
         //detects and applies a stat change action
-        //ex: +10 Kindness
+        //ex: +10 kindness
         if (action.substring(0, 1).equals("+") || action.substring(0, 1).equals("-")) {
             changeStats(action);
         }
@@ -351,20 +350,10 @@ public class Game {
         }
 
         //this is for if you want to print small enough that it doesn't warrant a separate file
-        if (action.indexOf("print(") != -1) {
-            System.out.println(action.substring(6, action.length()-1));
-        }
-
-        if (action.equals("left()")) {
-            _lover.moveLeft();
-        }
-
-        if (action.equals("mid()")) {
-            _lover.moveDown();
-        }
-
-        if (action.equals("right()")) {
-            _lover.moveRight();
+        if (action.indexOf("print") != -1) {
+            //We want to printed message to preserve capitalization
+            //the trim here is because we are working with a, which is untrimmed, and not lowercase
+            System.out.println(a.trim().substring(6, action.length()-1));
         }
     }
   }
@@ -372,18 +361,21 @@ public class Game {
   public void changeStats(String input) {
     int indexOfSpace = input.indexOf(" ");
     int amountIncreased = Integer.parseInt(input.substring(0, indexOfSpace));
-    String statChanged = input.substring(indexOfSpace + 1);
+    String statChanged = input.substring(indexOfSpace + 1).toLowerCase();
 
+    System.out.println(input);
     if (statChanged.equals("confidence")) {
         _player.setConfidence(_player.getConfidence() + amountIncreased);
+        System.out.println("confidence: " + _player.getConfidence());
     }
     if (statChanged.equals("intelligence")) {
         _player.setIntelligence(_player.getIntelligence() + amountIncreased);
+        System.out.println("intelligence: " + _player.getIntelligence());
     }
     if (statChanged.equals("kindness")) {
         _player.setKindness(_player.getKindness() + amountIncreased);
+        System.out.println("kindness: " + _player.getKindness());
     }
-    System.out.println(input);
   }
 
   private static void wait(int millis) {
