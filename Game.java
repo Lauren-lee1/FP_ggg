@@ -44,7 +44,6 @@ public class Game {
     }
 
     System.out.println("=======Personality Test=======");
-    wait(750);
     System.out.println("Are you a human?");
     if (yes()) {
       _player.setIntelligence(_player.getIntelligence()+10);
