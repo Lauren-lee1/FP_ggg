@@ -5,7 +5,7 @@ LLee: Ooh, rock climbing! I love rock climbing.
 A few hours later...
 prompt()
 Wow, you're very good at this!
-1: I could say the same haha...this a fun!
+1: I could say the same haha...this is fun!
 prompt()
 LLee: I can show you a few technique if you want...
 1: sure / +5 Kindness; load(rock_sure.txt)
