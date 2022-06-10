@@ -93,6 +93,7 @@ public class Game {
                 _lover = _listOfLovers.get(response - 1);
                 _story = _lover.getStory();
                 _dialogue = _lover.getDialogue();
+                _playerPath = new ArrayList<StoryNode>();
 
                 System.out.print("You have selected " + _lover.getName() + "\n");
                 break;
@@ -187,6 +188,12 @@ public class Game {
   public void replay() {
     //wait(750);
     System.out.println("You have reached the end of this story");
+    System.out.println("Do you want to keep dating this person?");
+    if (!yes()) {
+        System.out.println("Now returning to the personality test (you can farm up stats)");
+        _listOfLovers.remove(_lover);
+        personalityTest();
+    }
     System.out.println("Enter the index of the date you'd like to return to");
     System.out.println(_playerPath);
 

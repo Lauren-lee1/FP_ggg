@@ -37,10 +37,16 @@ We tried to find a workaround because we wanted fewer text files, but that compl
 was compounded by missing files and code resulting either from accidental deletions or forgetting to commit.
 In the end, v4, the version with the workaround, became so buggy that we just changed back to our original plan
 
+We had a Character.java file which was the superclass for Player.java and LoveInterest.java, but the stats of the love interest
+were never used because we ditched the matchabiilty idea a while back 
+
 we changed ___ to ___ bc...
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+building debugging tools would be helpful because there was an error in loading dialogue that went undetected for days, but which was found
+soon after writing a way to look into the dialogue stack
+
 tales of wisdom gained...
 ||||||||||||||||||||||||||||||||||||||||||
 
@@ -124,3 +130,15 @@ Laur and Kli :: removed v4alt and created v5 instead. Resolved a split that led 
 Kli :: added an arraylist that stores all possible loveinterests, added detection for capture(), which will remove the current loveinterest from the arraylist
 and send the player back to the personalitytest (for farming stats) before allowing the player to reselect their loveinterest, added a formal end to the game
 which occurs if the arraylist is empty
+==============================================================
+2022-06-08
+--------------------------------------------------------------
+Laur :: added more dialogue into the game
+KXiao :: finished writing LLee dialogue
+KLi :: experimented with making stat requirements to go on certain dates
+==============================================================
+2022-06-09
+--------------------------------------------------------------
+Laur :: created a way to detect stat requirements and act accordingly
+KLi :: multiple bug fixes and removed excess code, largest chunk of which was the entire Character.java file
+KXiao :: Finished writing secret endings
