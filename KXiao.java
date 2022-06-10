@@ -14,10 +14,10 @@ public class KXiao extends LoveInterest{
         StoryNode cafe = new StoryNode(_source + "cafe/cafe.txt");
         _story.setLeft(cafe);
 
-        StoryNode amusement = new StoryNode(_source + "amusement.txt");
+        StoryNode amusement = new StoryNode(_source + "amusement/amusement.txt");
         _story.setMid(amusement);
 
-        StoryNode vb = new StoryNode(_source + "volleyball.txt");
+        StoryNode vb = new StoryNode(_source + "volleyball/volleyball.txt");
         _story.setRight(vb);
     }
 

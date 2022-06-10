@@ -228,6 +228,12 @@ public class Game {
     while (true) {
         try {
             response = Integer.parseInt(_scanner.nextLine());
+            if (response == 420) {
+                System.out.println(_dialogue);
+            }
+            if (response == 69) {
+                System.out.println(_dialogue.pop());
+            }
             if (response > 0 && response <= effects.size()) {
                 break;
             }
@@ -242,7 +248,7 @@ public class Game {
     //System.out.println("you chose " + choice);
 
     //run the action corresponding to the option
-    
+
     actionSelect(choice);
     System.out.println(" ");
   }

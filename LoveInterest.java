@@ -57,19 +57,19 @@ public class LoveInterest {
 
     public StoryNode moveLeft() {
         _story = _story.getLeft();
-        addLines(_story.getValue());
+        //addLines(_story.getValue());
         return _story;
     }
 
     public StoryNode moveDown() {
         _story = _story.getMid();
-        addLines(_story.getValue());
+        //addLines(_story.getValue());
         return _story;
     }
 
     public StoryNode moveRight() {
         _story = _story.getRight();
-        addLines(_story.getValue());
+        //addLines(_story.getValue());
         return _story;
     }
 
