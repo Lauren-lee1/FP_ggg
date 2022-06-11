@@ -5,7 +5,7 @@ KXiao: Wow that was a really close match, You're very gifted at the game.
 prompt()
 KXiao: What was that?
 1 : Nothing...haha...
-KXiao: let's play again some other time!
 prompt()
+KXiao: let's play again some other time!
 1 : sure! / capture()
 2: I'm not sure about that / end()
