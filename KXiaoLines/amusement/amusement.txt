@@ -1,4 +1,6 @@
-KXiao: An amusement park...? Oh okay... / -5 intelligence
+prompt()
+KXiao: An amusement park...? Oh okay...
+1: I thought it would be fun / -5 intelligence; print(KXiao: I don't like amusement parks tough)
 prompt()
 KXiao: Okay, now that we're here, what rides do you want to go on?
 1: The tower of terror! / -15 kindness; +10 confidence; print(Ah...I feel like I'm going to die...); end()
