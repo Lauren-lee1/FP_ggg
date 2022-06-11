@@ -4,4 +4,4 @@ LLee: what do you mean, I touch grass everyday in my basement playing tennis?
 prompt()
 Are you judging me right now?
 1: No...
-LLee: You... tennis is life! / end()
+LLee: You... tennis is life!
