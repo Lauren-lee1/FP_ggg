@@ -1,6 +1,0 @@
-As you keep running, you hear a deep voice cry out
-???: GIIIIIIGGGGAAAAAAA CHAAAAAAAAD
-prompt()
-Kevin: We're almost there. I can lend you my boots, they'll give you enough speed to make it out
-1: Take the boots / print(Kevin: Cya); capture()
-2: Refuse the boots / load(refuseBoots.txt)

@@ -1,8 +1,0 @@
-As the dust settles, an extremely tall man emerges
-He is extremely muscular and is covered from head to toe with expensive clothing
-He lets out a cry
-???: GIIIIIIGGGGAAAAAAA CHAAAAAAAAD
-prompt()
-Kevin: Well, now that's he's found us, what do you want to do?
-1: Confront him / +10 confidence; end()
-2: Run / print(Kevin: yeah that's a pretty smart idea); capture()

@@ -1,4 +1,0 @@
-prompt() 
-Kevin: Well in that case, do you want to confront him or do you want to run?
-1: Confront him / +10 confidence; end()
-2: Run / print(Kevin: yeah that's a pretty smart idea); capture()
