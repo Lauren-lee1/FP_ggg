@@ -176,11 +176,10 @@ public class Game {
               if (response > 0 && response <= numberOfOptions) {
                   break;
               }
-          } catch (Exception e) {}
-
-          if (response == 0) {
+              if (response == 0) {
               _player.printStats();
-          } else {
+              }  
+          } catch (Exception e) {
               System.out.println("That's not a valid response");
           }
       }
